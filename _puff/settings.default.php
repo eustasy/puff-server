@@ -24,9 +24,9 @@ $Sitewide['Social']['Google+']  = 'https://plus.google.com/you';
 $Sitewide['Social']['Twitter']  = 'https://twitter.com/you';
 
 // Default Page Settings
-$Sitewide['Title']          = 'elementary';
-$Sitewide['Author']         = 'elementary LLC';
-$Sitewide['Description']    = 'A fast and open replacement for Windows and OS X. Pay what you want or download for free.';
+$Sitewide['Title']          = 'Puff';
+$Sitewide['Author']         = 'eustasy';
+$Sitewide['Description']    = 'A website.';
 $Sitewide['Image']          = '';
 $Sitewide['Theme Color']    = '#3892E0';
 $Sitewide['Google+ Author'] = $Sitewide['Social']['Google+'];
