@@ -6,6 +6,8 @@
 ## Puff_Blog
 - Blog
 - Feeds
+
+## Puff_Sitemap
 - Sitemap
 
 ## Puff_MySQL
