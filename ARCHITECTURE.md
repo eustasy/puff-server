@@ -2,42 +2,36 @@
 - Pages
 - SEO built in
 - Social built in
-
-## Puff_Blog
-- Blog
-- Feeds
-
-## Puff_Sitemap
-- Sitemap
-
-## Puff_MySQL
-- Support for MySQL and MariaDB connections.
-
-## Puff_Trending
-- Trending
-  - Library: Here, Miss (Optional)
-  - All Time
-  - Limited by Time
-  - Limited by Category
-  - Limited by Category and Time
-
-## Puff_Members
-- Registration
-  - Library: Recaptcha (Optional)
-  - Library: Sweet Captcha (Optional)
-  - EMail Verification
-    - Auto-Login
-- Log In
-- Log Out
-- 2 Factor Authentication
-- Session Listing & Termination
-- Edit Account Details
-- Password Resets
-  - Library: Browning (Optional)
-- Private Pages
-
-## Puff_Comments
-- Comments
-  - Library: Parsedown (Optional)
-- Reviews
-- Discussions
+- _Puff Blog_
+  - Blog
+  - Feeds
+- _Puff_Sitemap_
+  - Sitemap
+- _[Puff DB](https://github.com/eustasy/puff-db)_
+    - Support for MySQL and MariaDB connections.
+- _Puff Trending_
+  - Trending
+    - Library: Here, Miss (Optional)
+    - All Time
+    - Limited by Time
+    - Limited by Category
+    - Limited by Category and Time
+- _Puff Members_
+  - Registration
+    - Library: Recaptcha (Optional)
+    - Library: Sweet Captcha (Optional)
+    - EMail Verification
+      - Auto-Login
+  - Log In
+  - Log Out
+  - 2 Factor Authentication
+  - Session Listing & Termination
+  - Edit Account Details
+  - Password Resets
+    - Library: Browning (Optional)
+  - Private Pages
+- _Puff Comments_
+  - Comments
+    - Library: Parsedown (Optional)
+  - Reviews
+  - Discussions
