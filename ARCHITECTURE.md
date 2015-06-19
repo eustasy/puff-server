@@ -9,6 +9,8 @@
   - Sitemap
 - _[Puff DB](https://github.com/eustasy/puff-db)_
     - Support for MySQL and MariaDB connections.
+    - Automatically loaded on page-load.
+    - Persistent connections when supported.
 - _Puff Trending_
   - Trending
     - Library: Here, Miss (Optional)
