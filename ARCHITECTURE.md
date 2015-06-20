@@ -5,7 +5,7 @@
 - _Puff Blog_
   - Blog
   - Feeds
-- _Puff_Sitemap_
+- _Puff Sitemap_
   - Sitemap
 - _[Puff DB](https://github.com/eustasy/puff-db)_
     - Support for MySQL and MariaDB connections.
