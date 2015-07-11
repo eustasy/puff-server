@@ -13,7 +13,6 @@
     - Persistent connections when supported.
 - _Puff Trending_
   - Trending
-    - Library: Here, Miss (Optional)
     - All Time
     - Limited by Time
     - Limited by Category
