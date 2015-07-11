@@ -13,4 +13,3 @@
 
 <?php
 	require_once $Sitewide['Templates']['Footer'];
-?>
