@@ -4,4 +4,4 @@
 	puff_hook('footer');
 ?>
 </body>
-</html><?php puff_hook('endload'); ?>
+</html><?php puff_hook('endload');
