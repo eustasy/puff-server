@@ -83,9 +83,28 @@ date_default_timezone_set('UTC');
 
 
 // TODO
+
+////	Glob Recursive Function
+// Glob Recursively to a Pattern
+function glob_recursive($Pattern, $Flags = 0) {
+	// Search in the Current Directory
+	$Return = glob($Pattern, $Flags);
+	// FOREACHDIRECTORY
+	// Search in ALL sub-directories.
+	foreach (glob(dirname($Pattern).'/*', GLOB_ONLYDIR | GLOB_NOSORT) as $Directory) {
+		// This is a recursive function.
+		// Usually, THIS IS VERY BAD.
+		// For searching recursively however,
+		// it does make some sense.
+		if ( strpos($Directory, '/_') === false ) {
+			$Return = array_merge($Return, glob_recursive($Directory.'/'.basename($Pattern), $Flags));
+		}
+	} // FOREACHDIRECTORY
+	return $Return;
+}
 function require_all_once($Directory) {
 	global $Sitewide;
-	foreach (glob($Directory.'*.php') as $File) {
+	foreach (glob_recursive($Directory.'*.php') as $File) {
 		require_once $File;
 	}
 }
