@@ -96,9 +96,7 @@ function glob_recursive($Pattern, $Flags = 0) {
 		// Usually, THIS IS VERY BAD.
 		// For searching recursively however,
 		// it does make some sense.
-		if ( strpos($Directory, '/_') === false ) {
-			$Return = array_merge($Return, glob_recursive($Directory.'/'.basename($Pattern), $Flags));
-		}
+		$Return = array_merge($Return, glob_recursive($Directory.'/'.basename($Pattern), $Flags));
 	} // FOREACHDIRECTORY
 	return $Return;
 }
@@ -116,7 +114,7 @@ function ifOr($One, $Two, $Reference) {
 	return !empty($One[$Reference]) ? $One[$Reference] : $Two[$Reference];
 }
 if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
-	require_all_once($Sitewide, $Sitewide['Puff']['Functions']);
+	require_all_once($Sitewide['Puff']['Functions']);
 }
 
 
