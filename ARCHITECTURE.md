@@ -2,11 +2,10 @@
 - Pages
 - SEO built in
 - Social built in
+- Sitemap
 - _Puff Blog_
   - Blog
   - Feeds
-- _Puff Sitemap_
-  - Sitemap
 - _[Puff DB](https://github.com/eustasy/puff-db)_
     - Support for MySQL and MariaDB connections.
     - Automatically loaded on page-load.
