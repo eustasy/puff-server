@@ -5,6 +5,7 @@
 $Sitewide['Puff']['Root']      = __DIR__.'/';
 $Sitewide['Puff']['Hooks']     = $Sitewide['Puff']['Root'].'hooks/';
 $Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'functions/';
+$Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'/../_libs/';
 
 ////	Require the Configuration
 require_once $Sitewide['Puff']['Root'].'settings.default.php';
@@ -66,7 +67,8 @@ $Sitewide['Assets']['Internal']['Root']      = $Sitewide['Root'].'assets/';
 $Sitewide['Assets']['Internal']['JS']        = $Sitewide['Assets']['Internal']['Root'].'js/';
 $Sitewide['Assets']['Internal']['CSS']       = $Sitewide['Assets']['Internal']['Root'].'css/';
 $Sitewide['Assets']['Internal']['Image']     = $Sitewide['Assets']['Internal']['Root'].'images/';
-$Sitewide['Assets']['External']['Root']      = '/assets/';
+// TODO Not relative to install root.
+$Sitewide['Assets']['External']['Root']      = '/puff-core/assets/';
 $Sitewide['Assets']['External']['JS']        = $Sitewide['Assets']['External']['Root'].'js/';
 $Sitewide['Assets']['External']['CSS']       = $Sitewide['Assets']['External']['Root'].'css/';
 $Sitewide['Assets']['External']['Image']     = $Sitewide['Assets']['External']['Root'].'images/';
@@ -111,6 +113,10 @@ function puff_hook($Hook) {
 	require_all_once($Sitewide['Puff']['Hooks'].$Hook.'/');
 }
 function ifOr($One, $Two, $Reference) {
+	if ( empty($One[$Reference]) ) {
+		echo 'ONE FAILED';
+		if ( empty($Two[$Reference]) ) echo 'TWO FAILED';
+	}
 	return !empty($One[$Reference]) ? $One[$Reference] : $Two[$Reference];
 }
 if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {

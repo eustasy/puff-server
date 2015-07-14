@@ -4,6 +4,8 @@
 //
 // A title for your site.
 $Sitewide['Settings']['Site Title']                     = 'Puff';
+// Something much longer or much shorter.
+$Sitewide['Settings']['Alternative Site Title']         = 'Puff is Awesome';
 // Stripping the .php from URLs requires server-side configuration.
 // Check it works before enabling it.
 $Sitewide['Settings']['Strip PHP from URLs']            = false;
@@ -24,12 +26,13 @@ $Sitewide['Social']['Google+']  = 'https://plus.google.com/you';
 $Sitewide['Social']['Twitter']  = 'https://twitter.com/you';
 
 // Default Page Settings
-$Sitewide['Title']          = 'Puff';
-$Sitewide['Author']         = 'eustasy';
-$Sitewide['Description']    = 'A website.';
-$Sitewide['Image']          = '';
-$Sitewide['Theme Color']    = '#3892E0';
-$Sitewide['Google+ Author'] = $Sitewide['Social']['Google+'];
-$Sitewide['Twitter Author'] = $Sitewide['Social']['Twitter'];
-$Sitewide['Twitter Site']   = $Sitewide['Social']['Twitter'];
-
+$Sitewide['Page']['Title']          = 'Puff';
+$Sitewide['Page']['Author']         = 'eustasy';
+$Sitewide['Page']['Description']    = 'A website.';
+$Sitewide['Page']['Image']          = '';
+$Sitewide['Page']['Published']      = '';
+$Sitewide['Page']['Theme Color']    = '#3892E0';
+$Sitewide['Page']['Author Name']    = 'John Smith';
+$Sitewide['Page']['Google+ Author'] = $Sitewide['Social']['Google+'];
+$Sitewide['Page']['Twitter Author'] = $Sitewide['Social']['Twitter'];
+$Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];

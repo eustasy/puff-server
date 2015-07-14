@@ -18,12 +18,10 @@ $(function () {
 		ScrollToHash(hash);
 		return false;
 	});
-	// Cache the window
-	var $window = $(window);
-	// Scroll for back or forwward buttons.
-	$window.hashchange( function(){
+	// Scroll for back or forward buttons.
+	window.onhashchange = ( function(){
 		ScrollToHash(window.location.hash);
 	});
 	// Trigger on page load.
-	$window.hashchange();
+	ScrollToHash(window.location.hash);
 });
