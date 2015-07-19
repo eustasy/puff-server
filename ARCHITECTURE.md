@@ -2,21 +2,21 @@
 - Pages
 - SEO built in
 - Social built in
-- Sitemap
-- _Puff Blog_
+- Sitemap [TODO]
+- _Puff Blog_ [TODO]
   - Blog
   - Feeds
 - _[Puff DB](https://github.com/eustasy/puff-db)_
     - Support for MySQL and MariaDB connections.
     - Automatically loaded on page-load.
     - Persistent connections when supported.
-- _Puff Trending_
+- _Puff Trending_ [TODO]
   - Trending
     - All Time
     - Limited by Time
     - Limited by Category
     - Limited by Category and Time
-- _Puff Members_
+- _Puff Members_ [TODO]
   - Registration
     - Library: Recaptcha (Optional)
     - Library: Sweet Captcha (Optional)
@@ -30,7 +30,7 @@
   - Password Resets
     - Library: Browning (Optional)
   - Private Pages
-- _Puff Comments_
+- _Puff Comments_ [TODO]
   - Comments
     - Library: Parsedown (Optional)
   - Reviews
