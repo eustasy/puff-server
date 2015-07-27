@@ -31,7 +31,11 @@ if ( empty($Sitewide['Request']['Host']) ) {
 	$Sitewide['Request']['Host'] = filter_input(INPUT_SERVER, 'SERVER_NAME');
 }
 // Paths, Queries and Fragments
-$Sitewide['Request']['Path'] = explode('#', $_SERVER['REQUEST_URI']);
+if ( isset($_SERVER['REQUEST_URI']) ) {
+	$Sitewide['Request']['Path'] = explode('#', $_SERVER['REQUEST_URI']);
+} else {
+	$Sitewide['Request']['Path'] = '';
+}
 if ( isset($Sitewide['Request']['Path'][1]) ) {
 	$Sitewide['Request']['Fragment'] = $Sitewide['Request']['Path'][1];
 } else {
