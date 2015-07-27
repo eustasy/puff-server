@@ -19,12 +19,12 @@ if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
 			$Page['Type'] &&
 			!in_array($Page['Type'], array('API', 'Backend', 'Hidden'))
 		) {
-			$URL = str_replace($Sitewide['Root'], '/', $File);
+			$URL = str_replace($Sitewide['Root'], '', $File);
 			$URL = str_replace('index.php', '', $URL);
 			// TODO Responsive Priority and ChangeFreq
 			$Sitemap .= '
 	<url>
-		<loc>'.$URL.'</loc>
+		<loc>'.$Sitewide['Settings']['Site Root'].$URL.'</loc>
 		<lastmod>'.date('Y-m-d', filemtime($File)).'</lastmod>
 		<priority>1</priority>
 		<changefreq>daily</changefreq>

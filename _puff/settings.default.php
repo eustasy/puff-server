@@ -2,6 +2,8 @@
 
 ////	Settings
 //
+// The root URL of your site (with trailing slash)
+$Sitewide['Settings']['Site Root']                     = 'http://local.localtest.me/';
 // A title for your site.
 $Sitewide['Settings']['Site Title']                     = 'Puff';
 // Something much longer or much shorter.
