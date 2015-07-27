@@ -2,7 +2,7 @@
 - Pages
 - SEO built in
 - Social built in
-- Sitemap [TODO]
+- Sitemap
 - _Puff Blog_ [TODO]
   - Blog
   - Feeds
