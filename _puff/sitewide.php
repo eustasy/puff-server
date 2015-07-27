@@ -59,7 +59,7 @@ if ( $Sitewide['Request']['Fragment'] ) {
 
 ////	Frontend
 // Assume the root is 1 level up.
-$Sitewide['Root']                = __DIR__.'/../';
+$Sitewide['Root']                = str_replace('/_puff', '', __DIR__);
 
 ////	Templates
 $Sitewide['Templates']['Root']   = $Sitewide['Root'].'_templates/';
