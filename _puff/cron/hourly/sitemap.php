@@ -1,5 +1,4 @@
 <?php
-	require_once __DIR__.'/../../sitewide.php';
 
 if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
 
@@ -35,15 +34,15 @@ if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
 	$Sitemap .= '
 </urlset>';
 
-	// echo $Sitemap;
+	// var_dump($Sitemap);
 
 	$Result = file_put_contents($Sitewide['Root'].'sitemap.xml', $Sitemap);
 	if ( $Result ) {
-		echo 'Success: Generation and Write of Sitemap successful.';
+		echo 'Success: Generation and Write of Sitemap successful.'."\n";
 	} else {
-		echo 'Error: Sitemap could not be written, but we thought it was writable.';
+		echo 'Error: Sitemap could not be written, but we thought it was writable.'."\n";
 	}
 
 } else {
-	echo 'Error: '.$Sitewide['Root'].'sitemap.xml not writeable.';
+	echo 'Error: '.$Sitewide['Root'].'sitemap.xml not writeable.'."\n";
 }

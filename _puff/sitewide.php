@@ -3,9 +3,10 @@
 ////	Puff
 // Puff is installed in the current directory.
 $Sitewide['Puff']['Root']      = __DIR__.'/';
+$Sitewide['Puff']['Cron']      = $Sitewide['Puff']['Root'].'cron/';
 $Sitewide['Puff']['Hooks']     = $Sitewide['Puff']['Root'].'hooks/';
 $Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'functions/';
-$Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'/../_libs/';
+$Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
 
 ////	Require the Configuration
 require_once $Sitewide['Puff']['Root'].'settings.default.php';
