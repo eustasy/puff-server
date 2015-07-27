@@ -34,7 +34,7 @@ if ( empty($Sitewide['Request']['Host']) ) {
 if ( isset($_SERVER['REQUEST_URI']) ) {
 	$Sitewide['Request']['Path'] = explode('#', $_SERVER['REQUEST_URI']);
 } else {
-	$Sitewide['Request']['Path'] = '';
+	$Sitewide['Request']['Path'] = array('');
 }
 if ( isset($Sitewide['Request']['Path'][1]) ) {
 	$Sitewide['Request']['Fragment'] = $Sitewide['Request']['Path'][1];
