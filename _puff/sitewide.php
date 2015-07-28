@@ -131,10 +131,6 @@ function puff_hook($Hook) {
 	require_all_once($Sitewide['Puff']['Hooks'].$Hook.'/');
 }
 function ifOr($One, $Two, $Reference) {
-	if ( empty($One[$Reference]) ) {
-		echo 'ONE FAILED';
-		if ( empty($Two[$Reference]) ) echo 'TWO FAILED';
-	}
 	return !empty($One[$Reference]) ? $One[$Reference] : $Two[$Reference];
 }
 if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
