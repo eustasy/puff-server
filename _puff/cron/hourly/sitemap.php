@@ -1,7 +1,6 @@
 <?php
 
 if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
-
 	$Sitemap = '<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
