@@ -3,7 +3,7 @@
 - SEO built in
 - Social built in
 - Sitemap
-- _Puff Blog_ [TODO]
+- _[Puff Blog](https://github.com/eustasy/puff-blog)_ [TODO]
   - Blog
   - Feeds
 - _[Puff DB](https://github.com/eustasy/puff-db)_
