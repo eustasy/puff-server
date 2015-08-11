@@ -3,6 +3,7 @@
 - SEO built in
 - Social built in
 - Sitemap
+- A+ SSL Config
 - _[Puff Blog](https://github.com/eustasy/puff-blog)_ [TODO]
   - Blog
   - Feeds
