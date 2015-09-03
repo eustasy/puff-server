@@ -5,20 +5,20 @@
 - Sitemap
 - A+ SSL Config [TODO]
 - _[Puff Geo](https://github.com/eustasy/puff-geo)_
-  - Continent Detection
-  - Country Detection
-  - Auto-run on pre-load
+	- Continent Detection
+	- Country Detection
+	- Auto-run on pre-load
 - _[Puff Cookie Compliance](https://github.com/eustasy/puff-cookiecompliance)_
 	- Banner Creation
 	- Never-expires
-	- Auto-Accept (Optional)
+	- Optional Auto-Accept
 - _[Puff Blog](https://github.com/eustasy/puff-blog)_
-  - Blog [TODO]
-  - Feeds [TODO]
+	- Blog [TODO]
+	- Feeds [TODO]
 - _[Puff DB](https://github.com/eustasy/puff-db)_
-    - Support for MySQL and MariaDB connections.
-    - Automatically loaded on page-load.
-    - Persistent connections when supported.
+	- Support for MySQL and MariaDB connections.
+	- Automatically loaded on page-load.
+	- Persistent connections when supported.
 - _Puff Trending_ [TODO]
   - Trending
     - All Time
@@ -26,21 +26,21 @@
     - Limited by Category
     - Limited by Category and Time
 - _Puff Members_ [TODO]
-  - Registration
-    - Library: Recaptcha (Optional)
-    - Library: Sweet Captcha (Optional)
-    - EMail Verification
-      - Auto-Login
-  - Log In
-  - Log Out
-  - 2 Factor Authentication
-  - Session Listing & Termination
-  - Edit Account Details
-  - Password Resets
-    - Library: Browning (Optional)
-  - Private Pages
+	- Registration
+		- Library: Recaptcha (Optional)
+		- Library: Sweet Captcha (Optional)
+	- EMail Verification
+		- Auto-Login
+	- Log In
+	- Log Out
+	- 2 Factor Authentication
+	- Session Listing & Termination
+	- Edit Account Details
+	- Password Resets
+		 Library: Browning (Optional)
+	- Private Pages
 - _Puff Comments_ [TODO]
-  - Comments
-    - Library: Parsedown (Optional)
-  - Reviews
-  - Discussions
+	- Comments
+		- Library: Parsedown (Optional)
+	- Reviews
+	- Discussions
