@@ -5,9 +5,13 @@
 - Sitemap
 - A+ SSL Config [TODO]
 - _[Puff Geo](https://github.com/eustasy/puff-geo)_
-  - A location auto-detection plugin for Puff.
-  - _[Puff Cookie Compliance](https://github.com/eustasy/puff-cookiecompliance)_
-  	- Cookie Compliance with GeoLocate for Puff.
+  - Continent Detection
+  - Country Detection
+  - Auto-run on pre-load
+- _[Puff Cookie Compliance](https://github.com/eustasy/puff-cookiecompliance)_
+	- Banner Creation
+	- Never-expires
+	- Auto-Accept (Optional)
 - _[Puff Blog](https://github.com/eustasy/puff-blog)_
   - Blog [TODO]
   - Feeds [TODO]
