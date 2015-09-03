@@ -4,6 +4,10 @@
 - Social built in
 - Sitemap
 - A+ SSL Config [TODO]
+- _[Puff Geo](https://github.com/eustasy/puff-geo)_
+  - A location auto-detection plugin for Puff.
+  - _[Puff Cookie Compliance](https://github.com/eustasy/puff-cookiecompliance)_
+  	- Cookie Compliance with GeoLocate for Puff.
 - _[Puff Blog](https://github.com/eustasy/puff-blog)_
   - Blog [TODO]
   - Feeds [TODO]
