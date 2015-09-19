@@ -13,9 +13,6 @@ matrix:
     - php: 7.0
     - php: hhvm
 
-before_script:
-    - /home/travis/.phpenv/versions/5.5/bin/composer self-update
-
 script:
   - ./_checks/php.sh
   - php _checks/json.php
