@@ -13,14 +13,13 @@ matrix:
     - php: 7.0
     - php: hhvm
 
-before_script:
-  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;" -U postgres; fi
-  - if [[ "$DB" == "pgsql" ]]; then psql -c "create database hello_world_test;" -U postgres; fi
-  - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS hello_world_test;" -uroot; fi
-
 script:
   - ./_checks/php.sh
   - php _checks/json.php
+
+addons:
+    code_climate:
+        repo_token: fa124d92a7bf3976145fd76122e08ca3c9fd573736f377f8f0da9f994b23f78b
 
 notifications:
   email:
