@@ -39,7 +39,12 @@ ratings:
   paths:
     - "**.css"
     - "**.js"
+    - "**.json"
+    - "**.md"
+    - "**.phar"
     - "**.php"
+    - "**.sh"
+    - "**.xml"
 
 # You can globally exclude files from being analyzed by any engine using the
 # exclude_paths key.
