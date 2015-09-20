@@ -1,19 +1,21 @@
 <?php
 
-function isJson($filename) {
-	$string = file_get_contents($filename);
-	json_decode($string);
-	return (json_last_error() == JSON_ERROR_NONE);
+function isXml($filename) {
+	$xml = XMLReader::open($filename);
+	// The validate parser option must be enabled for
+	// this method to work properly
+	$xml->setParserProperty(XMLReader::VALIDATE, true);
+	return $xml->isValid();
 }
 
 require_once __DIR__.'/../_functions/glob_recursive.php';
-$json_files = glob_recursive(__DIR__.'/../*.json');
+$xml_files = glob_recursive(__DIR__.'/../*.xml');
 $result['invalid_files'] = array();
 $result['valid_files']   = array();
 
-foreach ( $json_files as $filename ) {
+foreach ( $xml_files as $filename ) {
 	// Validate
-	if ( isJson($filename) ) {
+	if ( isXml($filename) ) {
 		$result['valid_files'][] = $filename;
 	} else {
 		$result['invalid_files'][] = $filename;
