@@ -6,11 +6,15 @@ if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
 
 	foreach (glob_recursive($Sitewide['Root'].'*.php', 0, true) as $File) {
 		$Page['Type'] = false;
+		$Page['Published'] = false;
 		$Lines = file($File);
 		foreach ($Lines as $Line) {
 			if (strpos($Line, '$Page[\'Type\']') !== false) {
 				$Line = explode('\'', $Line);
 				$Page['Type'] = $Line[count($Line)-2];
+			} else if (strpos($Line, '$Page[\'Published\']') !== false) {
+				$Line = explode('\'', $Line);
+				$Page['Published'] = $Line[count($Line)-2];
 			}
 		}
 		if (
@@ -19,11 +23,16 @@ if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
 		) {
 			$URL = str_replace($Sitewide['Root'], '', $File);
 			$URL = str_replace('index.php', '', $URL);
+			if ( $Page['Published'] ) {
+				$Published = $Page['Published'];
+			} else {
+				$Published = date('Y-m-d', filemtime($File));
+			}
 			// TODO Responsive Priority and ChangeFreq
 			$Sitemap .= '
 	<url>
 		<loc>'.$Sitewide['Settings']['Site Root'].$URL.'</loc>
-		<lastmod>'.date('Y-m-d', filemtime($File)).'</lastmod>
+		<lastmod>'.$Published.'</lastmod>
 		<priority>1</priority>
 		<changefreq>daily</changefreq>
 	</url>';
