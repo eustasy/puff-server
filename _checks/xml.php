@@ -1,7 +1,8 @@
 <?php
 
 function isXml($filename) {
-	$xml = XMLReader::open($filename);
+	$xml = XMLReader;
+	$xml->open($filename);
 	// The validate parser option must be enabled for
 	// this method to work properly
 	$xml->setParserProperty(XMLReader::VALIDATE, true);
