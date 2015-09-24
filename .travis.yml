@@ -13,10 +13,13 @@ matrix:
     - php: 7.0
     - php: hhvm
 
+before_script:
+  - git clone https://github.com/eustasy/normal-checks.git
+
 script:
-  - ./_checks/php.sh
-  - php _checks/json.php
-  - php _checks/xml.php
+  - ./normal-checks/php.sh
+  - php normal-checks/json.php
+  - php normal-checks/xml.php
 
 notifications:
   email:
