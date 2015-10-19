@@ -13,8 +13,10 @@
 	- Never-expires
 	- Optional Auto-Accept
 - _[Puff Blog](https://github.com/eustasy/puff-blog)_
-	- Blog [TODO]
-	- Feed [Partial]
+	- Blog
+		- Pagination [TODO]
+	- Feed
+		- Pagination [TODO]
 - _[Puff DB](https://github.com/eustasy/puff-db)_
 	- Support for MySQL and MariaDB connections.
 	- Automatically loaded on page-load.
