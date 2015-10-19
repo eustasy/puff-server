@@ -5,7 +5,7 @@
 $Sitewide['Puff']['Root']      = __DIR__.'/';
 $Sitewide['Puff']['Cron']      = $Sitewide['Puff']['Root'].'cron/';
 $Sitewide['Puff']['Hooks']     = $Sitewide['Puff']['Root'].'hooks/';
-$Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'functions/';
+$Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'../_functions/';
 $Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
 
 ////	Require the Configuration

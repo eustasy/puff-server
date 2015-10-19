@@ -1,48 +1,34 @@
 <?php
 
 if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
-	$Sitemap = '<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
 	foreach (glob_recursive($Sitewide['Root'].'*.php', 0, true) as $File) {
-		$Page['Type'] = false;
-		$Page['Published'] = false;
-		$Lines = file($File);
-		foreach ($Lines as $Line) {
-			if (strpos($Line, '$Page[\'Type\']') !== false) {
-				$Line = explode('\'', $Line);
-				$Page['Type'] = $Line[count($Line)-2];
-			} else if (strpos($Line, '$Page[\'Published\']') !== false) {
-				$Line = explode('\'', $Line);
-				$Page['Published'] = $Line[count($Line)-2];
-			}
-		}
+		// Get page variables.
+		require_once $Sitewide['Puff']['Functions'].'load_page_variables.php';
+		$Page = load_page_variables($Sitewide, $File, 'Y-m-d');
+		// Add to list if allowed.
 		if (
 			$Page['Type'] &&
-			!in_array($Page['Type'], array('API', 'Backend', 'Hidden'))
+			!in_array($Page['Type'], array('API', 'Backend', 'Hidden', 'Private'))
 		) {
-			$URL = str_replace($Sitewide['Root'], '', $File);
-			$URL = str_replace('index.php', '', $URL);
-			if ( $Page['Published'] ) {
-				$Published = $Page['Published'];
-			} else {
-				$Published = date('Y-m-d', filemtime($File));
-			}
-			// TODO Responsive Priority and ChangeFreq
-			$Sitemap .= '
-	<url>
-		<loc>'.$Sitewide['Settings']['Site Root'].$URL.'</loc>
-		<lastmod>'.$Published.'</lastmod>
-		<priority>1</priority>
-		<changefreq>daily</changefreq>
-	</url>';
+			$Pages[$Page['Published'].' '.urlencode($Page['Link'])] = $Page;
 		}
 	}
 
+	$Sitemap = '<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+	foreach ( $Pages as $Item ) {
+		// TODO Responsive Priority and ChangeFreq
+		$Sitemap .= '
+	<url>
+		<loc>'.$Item['Link'].'</loc>
+		<lastmod>'.$Item['Published'].'</lastmod>
+		<priority>1</priority>
+		<changefreq>daily</changefreq>
+	</url>';
+	}
 	$Sitemap .= '
 </urlset>';
-
-	// var_dump($Sitemap);
 
 	$Result = file_put_contents($Sitewide['Root'].'sitemap.xml', $Sitemap);
 	if ( $Result ) {

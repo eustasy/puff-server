@@ -43,6 +43,9 @@ _puff/cron/weekly.php
 _puff/settings.default.php
 _puff/Generation.sh
 _libs/here-miss.php
+_functions/load_page_variables.php
+_functions/ends_with.php
+_functions/glob_recursive.php
 _templates/footer.php
 _templates/header.php
 sitemap.xml
