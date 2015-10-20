@@ -31,6 +31,7 @@ $Sitewide['Social']['Twitter']  = 'https://twitter.com/you';
 $Sitewide['Page']['Title']          = 'Puff';
 $Sitewide['Page']['Author']         = 'eustasy';
 $Sitewide['Page']['Description']    = 'A website.';
+$Sitewide['Page']['Tagline']        = 'A website.';
 $Sitewide['Page']['Image']          = '';
 $Sitewide['Page']['Published']      = '';
 $Sitewide['Page']['Theme Color']    = '#3892E0';

@@ -9,6 +9,7 @@ $Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'../_functions/';
 $Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
 
 ////	Require the Configuration
+// TODO Require all the configuration, not just default and custom.
 require_once $Sitewide['Puff']['Root'].'settings.default.php';
 if ( is_readable($Sitewide['Puff']['Root'].'settings.custom.php') ) {
 	require_once $Sitewide['Puff']['Root'].'settings.custom.php';
@@ -72,8 +73,7 @@ $Sitewide['Assets']['Internal']['Root']      = $Sitewide['Root'].'assets/';
 $Sitewide['Assets']['Internal']['JS']        = $Sitewide['Assets']['Internal']['Root'].'js/';
 $Sitewide['Assets']['Internal']['CSS']       = $Sitewide['Assets']['Internal']['Root'].'css/';
 $Sitewide['Assets']['Internal']['Image']     = $Sitewide['Assets']['Internal']['Root'].'images/';
-// TODO Not relative to install root.
-$Sitewide['Assets']['External']['Root']      = '/puff-core/assets/';
+$Sitewide['Assets']['External']['Root']      = $Sitewide['Settings']['Site Root'].'assets/';
 $Sitewide['Assets']['External']['JS']        = $Sitewide['Assets']['External']['Root'].'js/';
 $Sitewide['Assets']['External']['CSS']       = $Sitewide['Assets']['External']['Root'].'css/';
 $Sitewide['Assets']['External']['Image']     = $Sitewide['Assets']['External']['Root'].'images/';
@@ -89,8 +89,8 @@ $Sitewide['Cookies']['Prefix'] = str_replace('.', '_', $Sitewide['Request']['Hos
 date_default_timezone_set('UTC');
 
 
-// TODO
 
+// TODO Move all functions to functions files.
 require_once __DIR__.'/../_functions/glob_recursive.php';
 function require_all_once($Directory) {
 	global $Sitewide;

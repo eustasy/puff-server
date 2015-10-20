@@ -14,19 +14,18 @@
 	- Optional Auto-Accept
 - _[Puff Blog](https://github.com/eustasy/puff-blog)_
 	- Blog
-		- Pagination [TODO]
+		- Dynamic Pagination
 	- Feed
-		- Pagination [TODO]
 - _[Puff DB](https://github.com/eustasy/puff-db)_
 	- Support for MySQL and MariaDB connections.
 	- Automatically loaded on page-load.
 	- Persistent connections when supported.
 - _Puff Trending_ [TODO]
-  - Trending
-    - All Time
-    - Limited by Time
-    - Limited by Category
-    - Limited by Category and Time
+	- Trending
+		- All Time
+		- Limited by Time
+		- Limited by Category
+		- Limited by Category and Time
 - _Puff Members_ [TODO]
 	- Registration
 		- Library: Recaptcha (Optional)

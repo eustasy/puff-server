@@ -64,7 +64,7 @@ jQl.boot();
 <?php include_once $Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'; ?>
 </script>
 <?php
-	// TODO Maybe load
+	// TODO Maybe load these asyncronously too, and support internal loading.
 	if (!empty($Page['JS'])) {
 		foreach ( $Page['JS'] as $Script ) {
 			echo '<script src="'.$Script.'"></script>'."\n";
