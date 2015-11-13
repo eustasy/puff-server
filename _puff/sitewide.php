@@ -9,14 +9,30 @@ $Sitewide['Puff']['Settings']  = $Sitewide['Puff']['Root'].'settings/';
 $Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'../_functions/';
 $Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
 
-////	Require the Configuration
-// TODO Require all the configuration, not just default and custom.
+
+
+// TODO Move all functions to functions files.
+require_once __DIR__.'/../_functions/glob_recursive.php';
 function require_all_once($Directory) {
 	global $Sitewide;
 	foreach (glob_recursive($Directory.'*.php') as $File) {
 		require_once $File;
 	}
 }
+function puff_hook($Hook) {
+	global $Sitewide;
+	require_all_once($Sitewide['Puff']['Hooks'].$Hook.'/');
+}
+function ifOr($One, $Two, $Reference) {
+	return !empty($One[$Reference]) ? $One[$Reference] : $Two[$Reference];
+}
+if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
+	require_all_once($Sitewide['Puff']['Functions']);
+}
+
+
+
+////	Require the Configuration
 require_once $Sitewide['Puff']['Settings'].'core.php';
 require_all_once($Sitewide['Puff']['Settings']);
 if ( is_readable($Sitewide['Puff']['Root'].'settings.custom.php') ) {
@@ -95,24 +111,6 @@ $Sitewide['Cookies']['Prefix'] = str_replace('.', '_', $Sitewide['Request']['Hos
 
 ////	Timezone
 date_default_timezone_set('UTC');
-
-
-
-// TODO Move all functions to functions files.
-require_once __DIR__.'/../_functions/glob_recursive.php';
-function puff_hook($Hook) {
-	global $Sitewide;
-	require_all_once($Sitewide['Puff']['Hooks'].$Hook.'/');
-}
-function ifOr($One, $Two, $Reference) {
-	return !empty($One[$Reference]) ? $One[$Reference] : $Two[$Reference];
-}
-if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
-	require_all_once($Sitewide['Puff']['Functions']);
-}
-
-
-
 
 ////	Preload Hook
 puff_hook('preload');
