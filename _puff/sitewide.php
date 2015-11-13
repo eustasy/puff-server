@@ -5,12 +5,20 @@
 $Sitewide['Puff']['Root']      = __DIR__.'/';
 $Sitewide['Puff']['Cron']      = $Sitewide['Puff']['Root'].'cron/';
 $Sitewide['Puff']['Hooks']     = $Sitewide['Puff']['Root'].'hooks/';
+$Sitewide['Puff']['Settings']  = $Sitewide['Puff']['Root'].'settings/';
 $Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'../_functions/';
 $Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
 
 ////	Require the Configuration
 // TODO Require all the configuration, not just default and custom.
-require_once $Sitewide['Puff']['Root'].'settings.default.php';
+function require_all_once($Directory) {
+	global $Sitewide;
+	foreach (glob_recursive($Directory.'*.php') as $File) {
+		require_once $File;
+	}
+}
+require_once $Sitewide['Puff']['Settings'].'core.php';
+require_all_once($Sitewide['Puff']['Settings']);
 if ( is_readable($Sitewide['Puff']['Root'].'settings.custom.php') ) {
 	require_once $Sitewide['Puff']['Root'].'settings.custom.php';
 }
@@ -92,12 +100,6 @@ date_default_timezone_set('UTC');
 
 // TODO Move all functions to functions files.
 require_once __DIR__.'/../_functions/glob_recursive.php';
-function require_all_once($Directory) {
-	global $Sitewide;
-	foreach (glob_recursive($Directory.'*.php') as $File) {
-		require_once $File;
-	}
-}
 function puff_hook($Hook) {
 	global $Sitewide;
 	require_all_once($Sitewide['Puff']['Hooks'].$Hook.'/');
