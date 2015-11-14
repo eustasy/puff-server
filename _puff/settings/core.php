@@ -39,3 +39,6 @@ $Sitewide['Page']['Author Name']    = 'John Smith';
 $Sitewide['Page']['Google+ Author'] = $Sitewide['Social']['Google+'];
 $Sitewide['Page']['Twitter Author'] = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];
+
+// Core Versions
+$Sitewide['Version']['Core'] = '0.1';
