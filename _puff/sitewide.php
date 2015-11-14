@@ -26,9 +26,6 @@ function puff_hook($Hook) {
 function ifOr($One, $Two, $Reference) {
 	return !empty($One[$Reference]) ? $One[$Reference] : $Two[$Reference];
 }
-if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
-	require_all_once($Sitewide['Puff']['Functions']);
-}
 
 
 
@@ -38,6 +35,14 @@ require_all_once($Sitewide['Puff']['Settings']);
 if ( is_readable($Sitewide['Puff']['Root'].'settings.custom.php') ) {
 	require_once $Sitewide['Puff']['Root'].'settings.custom.php';
 }
+
+
+
+if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
+	require_all_once($Sitewide['Puff']['Functions']);
+}
+
+
 
 ////	Request
 // Scheme & Security
@@ -112,7 +117,7 @@ $Sitewide['Cookies']['Prefix'] = str_replace('.', '_', $Sitewide['Request']['Hos
 ////	Timezone
 date_default_timezone_set('UTC');
 $Time = time();
-$Date = date($Time, DATE_ATOM);
+$Date = date(DATE_ATOM, $Time);
 
 ////	Preload Hook
 puff_hook('preload');
