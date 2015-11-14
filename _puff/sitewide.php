@@ -111,10 +111,12 @@ $Sitewide['Cookies']['Prefix'] = str_replace('.', '_', $Sitewide['Request']['Hos
 
 ////	Timezone
 date_default_timezone_set('UTC');
+$Time = time();
+$Date = date($Time, DATE_ATOM);
 
 ////	Preload Hook
 puff_hook('preload');
-// Load any page variables declared as $Page, just this one time.l
+// Load any page variables declared as $Page, just this one time.
 if ( !empty($Sitewide['Page']) ) {
 	$Page = $Sitewide['Page'];
 }
