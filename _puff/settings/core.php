@@ -40,5 +40,5 @@ $Sitewide['Page']['Google+ Author'] = $Sitewide['Social']['Google+'];
 $Sitewide['Page']['Twitter Author'] = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];
 
-// Core Versions
+// Core Version
 $Sitewide['Version']['Core'] = '0.1';
