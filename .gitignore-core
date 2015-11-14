@@ -40,7 +40,7 @@ _puff/cron/weekly/empty.php
 _puff/cron/hourly/empty.php
 _puff/cron/hourly/sitemap.php
 _puff/cron/weekly.php
-_puff/settings.default.php
+_puff/settings/core.php
 _puff/Generation.sh
 _libs/here-miss.php
 _functions/load_page_variables.php
