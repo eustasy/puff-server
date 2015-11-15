@@ -9,25 +9,9 @@ $Sitewide['Puff']['Settings']  = $Sitewide['Puff']['Root'].'settings/';
 $Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'../_functions/';
 $Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
 
-
-
-// TODO Move all functions to functions files.
-require_once __DIR__.'/../_functions/glob_recursive.php';
-function require_all_once($Directory) {
-	global $Sitewide;
-	foreach (glob_recursive($Directory.'*.php') as $File) {
-		require_once $File;
-	}
-}
-function puff_hook($Hook) {
-	global $Sitewide;
-	require_all_once($Sitewide['Puff']['Hooks'].$Hook.'/');
-}
-function ifOr($One, $Two, $Reference) {
-	return !empty($One[$Reference]) ? $One[$Reference] : $Two[$Reference];
-}
-
-
+////	Pre-load necessary functions.
+require_once $Sitewide['Puff']['Functions'].'glob_recursive.php';
+require_once $Sitewide['Puff']['Functions'].'require_all_once.php';
 
 ////	Require the Configuration
 require_once $Sitewide['Puff']['Settings'].'core.php';
@@ -36,13 +20,10 @@ if ( is_readable($Sitewide['Puff']['Root'].'settings.custom.php') ) {
 	require_once $Sitewide['Puff']['Root'].'settings.custom.php';
 }
 
-
-
+////	Require other Functions if auto-loaded.
 if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
 	require_all_once($Sitewide['Puff']['Functions']);
 }
-
-
 
 ////	Request
 // Scheme & Security
