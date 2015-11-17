@@ -31,7 +31,7 @@
 	echo "\n";
 ?>
 <!-- iPinning -->
-<meta name="apple-mobile-web-app-title" content="elementary">
+<meta name="apple-mobile-web-app-title" content="<?php echo $Sitewide['Settings']['Site Title']; ?>">
 <!-- Android Pinning -->
 <link rel="manifest"                    href="/assets/manifest.json">
 <!-- Favicon -->
