@@ -54,7 +54,7 @@ page-css-js.php
 page-full.php
 page-minimal.php
 _libs/here-miss.php
-test-links.php
+test.links.php
 .gitignore-core
 _templates/header.php
 _templates/footer.php
