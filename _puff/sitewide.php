@@ -10,8 +10,8 @@ $Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'../_functions/';
 $Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
 
 ////	Pre-load necessary functions.
-require_once $Sitewide['Puff']['Functions'].'glob_recursive.php';
-require_once $Sitewide['Puff']['Functions'].'require_all_once.php';
+require_once $Sitewide['Puff']['Functions'].'core/glob_recursive.php';
+require_once $Sitewide['Puff']['Functions'].'core/require_all_once.php';
 
 ////	Require the Configuration
 require_once $Sitewide['Puff']['Settings'].'core.php';
