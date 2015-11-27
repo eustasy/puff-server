@@ -12,11 +12,16 @@
 ////	Code
 
 // Construct the AutoLink name.
-$Sitewide['Request']['AutoLink'] = str_replace('/', '-', $Sitewide['Request']['Path']);
+$BaseCompare = parse_url($Sitewide['Settings']['Site Root'], PHP_URL_PATH);
+$Sitewide['Request']['AutoLink'] = str_replace($BaseCompare, '', $Sitewide['Request']['Path']);
+$Sitewide['Request']['AutoLink'] = str_replace('/', '-', $Sitewide['Request']['AutoLink']);
 if ( substr($Sitewide['Request']['Path'], -1) == '/' ) {
 	$Sitewide['Request']['AutoLink'] .= 'index';
 }
 $Sitewide['Request']['AutoLink'] = trim($Sitewide['Request']['AutoLink'], '-');
+if ( substr($Sitewide['Request']['AutoLink'], -4, 4) == '.php' ) {
+	$Sitewide['Request']['AutoLink'] = substr($Sitewide['Request']['AutoLink'], 0, -4);
+}
 
 // Define a function to check files exist server-side before loading them client-side.
 function AutoLink($Type) {
