@@ -13,6 +13,8 @@ matrix:
     - php: 7.0
     - php: hhvm
 
+before_install:
+  - pip install --user codecov
 before_script:
   - git clone https://github.com/eustasy/normal-checks.git
 
@@ -20,6 +22,9 @@ script:
   - ./normal-checks/php.sh
   - php normal-checks/json.php
   - php normal-checks/xml.php
+
+after_success:
+  - codecov
 
 notifications:
   email:
