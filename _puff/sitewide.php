@@ -3,11 +3,11 @@
 ////	Puff
 // Puff is installed in the current directory.
 $Sitewide['Puff']['Root']      = __DIR__.'/';
-$Sitewide['Puff']['Cron']      = $Sitewide['Puff']['Root'].'cron/';
-$Sitewide['Puff']['Hooks']     = $Sitewide['Puff']['Root'].'hooks/';
-$Sitewide['Puff']['Settings']  = $Sitewide['Puff']['Root'].'settings/';
+$Sitewide['Puff']['Cron']      = $Sitewide['Puff']['Root'].'../_cron/';
 $Sitewide['Puff']['Functions'] = $Sitewide['Puff']['Root'].'../_functions/';
+$Sitewide['Puff']['Hooks']     = $Sitewide['Puff']['Root'].'../_hooks/';
 $Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
+$Sitewide['Puff']['Settings']  = $Sitewide['Puff']['Root'].'../_settings/';
 
 ////	Pre-load necessary functions.
 require_once $Sitewide['Puff']['Functions'].'core/glob_recursive.php';
@@ -16,8 +16,8 @@ require_once $Sitewide['Puff']['Functions'].'core/require_all_once.php';
 ////	Require the Configuration
 require_once $Sitewide['Puff']['Settings'].'core.php';
 require_all_once($Sitewide['Puff']['Settings']);
-if ( is_readable($Sitewide['Puff']['Root'].'settings.custom.php') ) {
-	require_once $Sitewide['Puff']['Root'].'settings.custom.php';
+if ( is_readable($Sitewide['Puff']['Settings'].'custom.php') ) {
+	require $Sitewide['Puff']['Settings'].'custom.php';
 }
 
 ////	Require other Functions if auto-loaded.
