@@ -14,11 +14,11 @@ require_once $Sitewide['Puff']['Functions'].'core/glob_recursive.php';
 require_once $Sitewide['Puff']['Functions'].'core/require_all_once.php';
 
 ////	Require the Configuration
-require_once $Sitewide['Puff']['Settings'].'core.php';
-require_all_once($Sitewide['Puff']['Settings']);
-if ( is_readable($Sitewide['Puff']['Settings'].'custom.php') ) {
-	require $Sitewide['Puff']['Settings'].'custom.php';
+require_once $Sitewide['Puff']['Settings'].'core.default.php';
+if ( is_readable($Sitewide['Puff']['Settings'].'core.custom.php') ) {
+	require $Sitewide['Puff']['Settings'].'core.custom.php';
 }
+require_all_once($Sitewide['Puff']['Settings']);
 
 ////	Require other Functions if auto-loaded.
 if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
