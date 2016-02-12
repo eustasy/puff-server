@@ -1,9 +1,18 @@
-# Special
-google68cf6f5d58f84416.html
 # Standard
 *custom*
 *~
-# puff-core
+# [Puff Core](https://github.com/eustasy/puff-core)
+## Global
+_functions/core/*
+_settings/core*
+## Dependencies
+_libs/here-miss.php
+## Files
+.gitignore-core
+sitemap.xml
+ARCHITECTURE.md
+api/csp_report.php
+### Assets
 assets/images/circular-blue-small-compressed.png
 assets/manifest.json.php
 assets/hsts-attempt.php
@@ -11,50 +20,42 @@ assets/css/puff-core-index.css
 assets/js/jQl.min.js
 assets/js/external-links.js
 assets/js/smooth-scrolling.js
-sitemap.xml
-ARCHITECTURE.md
-api/csp_report.php
-_puff/sitewide.php
-_puff/Generation.sh
-_puff/hooks/post-content/empty.php
-_puff/hooks/sidebar/empty.php
-_puff/hooks/navigation/empty.php
-_puff/hooks/endload/empty.php
-_puff/hooks/pre-content/empty.php
-_puff/hooks/header/empty.php
-_puff/hooks/preload/headers.php
-_puff/hooks/preload/strip-php.php
-_puff/hooks/preload/honor-dnt.php
-_puff/hooks/preload/autolink.php
-_puff/hooks/preload/empty.php
-_puff/hooks/footer/empty.php
-_puff/hooks/head/google-analytics.php
-_puff/hooks/head/hsts-attempt.php
-_puff/hooks/head/empty.php
-_puff/settings/core.php
-_puff/nginx.conf
-_puff/cron/daily/empty.php
-_puff/cron/hourly/sitemap.php
-_puff/cron/hourly/empty.php
-_puff/cron/weekly.php
-_puff/cron/daily.php
-_puff/cron/minute/empty.php
-_puff/cron/weekly/empty.php
-_puff/cron/minute.php
-_puff/cron/crontab.php
-_puff/cron/hourly.php
-_puff/csp_report.log
-_functions/core/load_page_variables.php
-_functions/core/ifor.php
-_functions/core/require_all_once.php
-_functions/core/ends_with.php
-_functions/core/puff_hook.php
-_functions/core/glob_recursive.php
+### Cron
+_cron/crontab.php
+_cron/minute.php
+_cron/minute/empty.php
+_cron/hourly.php
+_cron/hourly/empty.php
+_cron/hourly/sitemap.php
+_cron/daily.php
+_cron/daily/empty.php
+_cron/weekly.php
+_cron/weekly/empty.php
+### Example Pages
 page-css-js.php
 page-full.php
 page-minimal.php
-_libs/here-miss.php
-test.links.php
-.gitignore-core
+### Hooks
+_hooks/head/empty.php
+_hooks/head/google-analytics.php
+_hooks/head/hsts-attempt.php
+_hooks/header/empty.php
+_hooks/footer/empty.php
+_hooks/navigation/empty.php
+_hooks/pre-content/empty.php
+_hooks/preload/empty.php
+_hooks/preload/autolink.php
+_hooks/preload/headers.php
+_hooks/preload/honor-dnt.php
+_hooks/preload/strip-php.php
+_hooks/post-content/empty.php
+_hooks/sidebar/empty.php
+_hooks/endload/empty.php
+### Puff
+_puff/sitewide.php
+_puff/Generation.sh
+_puff/nginx.conf
+_puff/csp_report.log
+### Templates
 _templates/header.php
 _templates/footer.php
