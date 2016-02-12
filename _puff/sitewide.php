@@ -14,9 +14,15 @@ require_once $Sitewide['Puff']['Functions'].'core/glob_recursive.php';
 require_once $Sitewide['Puff']['Functions'].'core/require_all_once.php';
 
 ////	Require the Configuration
+// Core at 0
 require_once $Sitewide['Puff']['Settings'].'core.default.php';
+// Defaults first.
+foreach (glob_recursive($Sitewide['Puff']['Settings'].'*.default.php') as $File) {
+	require_once $File;
+}
+// Others second.
 require_all_once($Sitewide['Puff']['Settings']);
-// Override with special commands.
+// Custom last.
 if ( is_readable($Sitewide['Puff']['Settings'].'custom.php') ) {
 	require $Sitewide['Puff']['Settings'].'custom.php';
 }
