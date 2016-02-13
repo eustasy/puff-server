@@ -25,7 +25,7 @@
 		- Limited by Time
 		- Limited by Category
 		- Limited by Category and Time
-- _Puff Members_
+- _[Puff Members](https://github.com/eustasy/puff-members)_
 	- Registration [TODO]
 		- Library: Recaptcha (Optional)
 	- EMail Verification [TODO]
