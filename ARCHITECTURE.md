@@ -3,7 +3,6 @@
 - SEO built in
 - Social built in
 - Sitemap
-- A+ SSL Config [TODO]
 - _[Puff Geo](https://github.com/eustasy/puff-geo)_
 	- Continent Detection
 	- Country Detection
@@ -26,18 +25,17 @@
 		- Limited by Time
 		- Limited by Category
 		- Limited by Category and Time
-- _Puff Members_ [TODO]
-	- Registration
+- _Puff Members_
+	- Registration [TODO]
 		- Library: Recaptcha (Optional)
-		- Library: Sweet Captcha (Optional)
-	- EMail Verification
+	- EMail Verification [TODO]
 		- Auto-Login
 	- Log In
 	- Log Out
 	- 2 Factor Authentication
 	- Session Listing & Termination
 	- Edit Account Details
-	- Password Resets
+	- Password Resets [TODO]
 		 Library: Browning (Optional)
 	- Private Pages
 - _Puff Comments_ [TODO]
