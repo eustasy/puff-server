@@ -1,6 +1,6 @@
 <?php
 
-////	Settings
+////	Puff Core Settings
 //
 // The root URL of your site (with trailing slash)
 $Sitewide['Settings']['Site Root']                      = 'http://local.localtest.me/';
@@ -40,5 +40,5 @@ $Sitewide['Page']['Google+ Author'] = $Sitewide['Social']['Google+'];
 $Sitewide['Page']['Twitter Author'] = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];
 
-// Core Version
+// Version
 $Sitewide['Version']['Core'] = '0.4';
