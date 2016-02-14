@@ -1,7 +1,7 @@
 <?php
 
 if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
-
+	// For each PHP File
 	foreach (glob_recursive($Sitewide['Root'].'*.php', 0, true) as $File) {
 		// Get page variables.
 		require_once $Sitewide['Puff']['Functions'].'load_page_variables.php';
