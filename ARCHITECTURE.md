@@ -32,11 +32,12 @@
 		- Auto-Login
 	- Log In
 	- Log Out
-	- 2 Factor Authentication
+	- 2 Factor Authentication [TODO]
+		 - Library: Authenticatron (Optional)
 	- Session Listing & Termination
 	- Edit Account Details
 	- Password Resets [TODO]
-		 Library: Browning (Optional)
+		 - Library: Browning (Optional)
 	- Private Pages
 - _Puff Comments_ [TODO]
 	- Comments
