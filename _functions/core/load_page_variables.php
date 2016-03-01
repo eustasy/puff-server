@@ -11,7 +11,7 @@ function load_page_variables($Sitewide, $File, $Date_Format) {
 	$URL = str_replace($Sitewide['Root'], '', $File);
 	$URL = str_replace('index.php', '', $URL);
 	if ( $Sitewide['Settings']['Strip PHP from URLs'] ) {
-		require_once $Sitewide['Puff']['Functions'].'ends_with.php';
+		require_once $Sitewide['Puff']['Functions'].'core/ends_with.php';
 		if ( ends_with($URL, '.php') ) {
 			$URL = substr($URL, 0, -4);
 		}
