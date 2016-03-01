@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>http://local.localtest.me/</loc>
-		<lastmod>2015-02-05</lastmod>
+		<lastmod>2016-02-27</lastmod>
+		<priority>1</priority>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>http://local.localtest.me/page-css-js.php</loc>
+		<lastmod>2016-02-27</lastmod>
+		<priority>1</priority>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>http://local.localtest.me/page-full.php</loc>
+		<lastmod>2015-11-16</lastmod>
+		<priority>1</priority>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+		<loc>http://local.localtest.me/page-minimal.php</loc>
+		<lastmod>2016-02-27</lastmod>
 		<priority>1</priority>
 		<changefreq>daily</changefreq>
 	</url>
