@@ -53,28 +53,6 @@ if ( $Sitewide['Request']['Fragment'] ) {
 	$Sitewide['Request']['Full'] .= '#'.$Sitewide['Request']['Fragment'];
 }
 
-////	Frontend
-// Assume the root is 1 level up.
-$Sitewide['Root']                = realpath(__DIR__.'/../').'/';
-
-////	Templates
-$Sitewide['Templates']['Root']   = $Sitewide['Root'].'_templates/';
-$Sitewide['Templates']['Header'] = $Sitewide['Templates']['Root'].'header.php';
-$Sitewide['Templates']['Footer'] = $Sitewide['Templates']['Root'].'footer.php';
-
-////	Assets
-$Sitewide['Assets']['Internal']['Root']      = $Sitewide['Root'].'assets/';
-$Sitewide['Assets']['Internal']['JS']        = $Sitewide['Assets']['Internal']['Root'].'js/';
-$Sitewide['Assets']['Internal']['CSS']       = $Sitewide['Assets']['Internal']['Root'].'css/';
-$Sitewide['Assets']['Internal']['Image']     = $Sitewide['Assets']['Internal']['Root'].'images/';
-$Sitewide['Assets']['External']['Root']      = $Sitewide['Settings']['Site Root'].'assets/';
-$Sitewide['Assets']['External']['JS']        = $Sitewide['Assets']['External']['Root'].'js/';
-$Sitewide['Assets']['External']['CSS']       = $Sitewide['Assets']['External']['Root'].'css/';
-$Sitewide['Assets']['External']['Image']     = $Sitewide['Assets']['External']['Root'].'images/';
-$Sitewide['Assets']['Extension']['JS']       = '.js';
-$Sitewide['Assets']['Extension']['CSS']      = '.css';
-$Sitewide['Assets']['Extension']['Image']    = '.png';
-
 ////	Cookies
 $Sitewide['Cookies']['HTTPOnly'] = true;
 $Sitewide['Cookies']['Prefix'] = str_replace('.', '_', $Sitewide['Request']['Host']);
@@ -106,6 +84,28 @@ if ( is_readable($Sitewide['Puff']['Settings'].'custom.php') ) {
 if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
 	require_all_once($Sitewide['Puff']['Functions']);
 }
+
+////	Frontend
+// Assume the root is 1 level up.
+$Sitewide['Root']                = realpath(__DIR__.'/../').'/';
+
+////	Templates
+$Sitewide['Templates']['Root']   = $Sitewide['Root'].'_templates/';
+$Sitewide['Templates']['Header'] = $Sitewide['Templates']['Root'].'header.php';
+$Sitewide['Templates']['Footer'] = $Sitewide['Templates']['Root'].'footer.php';
+
+////	Assets
+$Sitewide['Assets']['Internal']['Root']      = $Sitewide['Root'].'assets/';
+$Sitewide['Assets']['Internal']['JS']        = $Sitewide['Assets']['Internal']['Root'].'js/';
+$Sitewide['Assets']['Internal']['CSS']       = $Sitewide['Assets']['Internal']['Root'].'css/';
+$Sitewide['Assets']['Internal']['Image']     = $Sitewide['Assets']['Internal']['Root'].'images/';
+$Sitewide['Assets']['External']['Root']      = $Sitewide['Settings']['Site Root'].'assets/';
+$Sitewide['Assets']['External']['JS']        = $Sitewide['Assets']['External']['Root'].'js/';
+$Sitewide['Assets']['External']['CSS']       = $Sitewide['Assets']['External']['Root'].'css/';
+$Sitewide['Assets']['External']['Image']     = $Sitewide['Assets']['External']['Root'].'images/';
+$Sitewide['Assets']['Extension']['JS']       = '.js';
+$Sitewide['Assets']['Extension']['CSS']      = '.css';
+$Sitewide['Assets']['Extension']['Image']    = '.png';
 
 ////	Preload Hook
 puff_hook('preload');
