@@ -9,29 +9,6 @@ $Sitewide['Puff']['Hooks']     = $Sitewide['Puff']['Root'].'../_hooks/';
 $Sitewide['Puff']['Libs']      = $Sitewide['Puff']['Root'].'../_libs/';
 $Sitewide['Puff']['Settings']  = $Sitewide['Puff']['Root'].'../_settings/';
 
-////	Pre-load necessary functions.
-require_once $Sitewide['Puff']['Functions'].'core/glob_recursive.php';
-require_once $Sitewide['Puff']['Functions'].'core/require_all_once.php';
-
-////	Require the Configuration
-// Core at 0
-require_once $Sitewide['Puff']['Settings'].'core.default.php';
-// Defaults first.
-foreach (glob_recursive($Sitewide['Puff']['Settings'].'*.default.php') as $File) {
-	require_once $File;
-}
-// Others second.
-require_all_once($Sitewide['Puff']['Settings']);
-// Custom last.
-if ( is_readable($Sitewide['Puff']['Settings'].'custom.php') ) {
-	require $Sitewide['Puff']['Settings'].'custom.php';
-}
-
-////	Require other Functions if auto-loaded.
-if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
-	require_all_once($Sitewide['Puff']['Functions']);
-}
-
 ////	Request
 // Scheme & Security
 if (
@@ -106,6 +83,29 @@ $Sitewide['Cookies']['Prefix'] = str_replace('.', '_', $Sitewide['Request']['Hos
 date_default_timezone_set('UTC');
 $Time = time();
 $Date = date(DATE_ATOM, $Time);
+
+////	Pre-load necessary functions.
+require_once $Sitewide['Puff']['Functions'].'core/glob_recursive.php';
+require_once $Sitewide['Puff']['Functions'].'core/require_all_once.php';
+
+////	Require the Configuration
+// Core at 0
+require_once $Sitewide['Puff']['Settings'].'core.default.php';
+// Defaults first.
+foreach (glob_recursive($Sitewide['Puff']['Settings'].'*.default.php') as $File) {
+	require_once $File;
+}
+// Others second.
+require_all_once($Sitewide['Puff']['Settings']);
+// Custom last.
+if ( is_readable($Sitewide['Puff']['Settings'].'custom.php') ) {
+	require $Sitewide['Puff']['Settings'].'custom.php';
+}
+
+////	Require other Functions if auto-loaded.
+if ( $Sitewide['Settings']['AutoLoad']['Functions'] ) {
+	require_all_once($Sitewide['Puff']['Functions']);
+}
 
 ////	Preload Hook
 puff_hook('preload');
