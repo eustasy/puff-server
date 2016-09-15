@@ -21,6 +21,9 @@ $Sitewide['Settings']['Google Analytics']               = false;
 $Sitewide['Settings']['Try to Secure']                  = false;
 // Load all the functions to be ready.
 $Sitewide['Settings']['AutoLoad']['Functions']          = true;
+// When to paginate the sitemap, Google recommends 10 MB or 50k entries.
+$Sitewide['Sitemap']['Pagination']                      = 10000;
+
 
 // Some social settings for your site.
 $Sitewide['Social']['Facebook'] = 'https://www.facebook.com/you';
