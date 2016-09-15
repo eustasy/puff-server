@@ -21,8 +21,15 @@ if ( is_writable($Sitewide['Root'].'sitemap.xml') ) {
 		// TODO Responsive Priority and ChangeFreq
 		$Sitemap .= '
 	<url>
-		<loc>'.$Item['Link'].'</loc>
-		<lastmod>'.$Item['Published'].'</lastmod>
+		<loc>'.$Item['Link'].'</loc>';
+		if (
+			!empty($Item['Published']) &&
+			$Item['Published'] != '1970-01-01'
+		) {
+			$Sitemap .= '
+		<lastmod>'.$Item['Published'].'</lastmod>';
+		}
+		$Sitemap .= '
 		<priority>1</priority>
 		<changefreq>daily</changefreq>
 	</url>';
