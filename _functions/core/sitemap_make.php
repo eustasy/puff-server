@@ -18,7 +18,12 @@ function Sitemap_Make($SitemapPages) {
 			$Priortiy = 0.1;
 		}
 		$Sitemap .= '		<priority>'.$Priority.'</priority>'.PHP_EOL;
-		$Sitemap .= '		<changefreq>daily</changefreq>'.PHP_EOL;
+		if ( strpos($Item['Type'], 'Index') !== false ) {
+			$Changed = 'daily';
+		} else {
+			$Changed = 'weekly';
+		}
+		$Sitemap .= '		<changefreq>'.$Changed.'</changefreq>'.PHP_EOL;
 		$Sitemap .= '	</url>'.PHP_EOL;
 	}
 	$Sitemap .= '</urlset>'.PHP_EOL;
