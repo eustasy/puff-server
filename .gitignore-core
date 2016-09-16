@@ -1,6 +1,8 @@
 # Standard
 *custom*
 *~
+sitemap.xml
+sitemap_*.xml
 # [Puff Core](https://github.com/eustasy/puff-core)
 ## Global
 _functions/core/*
@@ -9,7 +11,6 @@ _settings/core*
 _libs/here-miss.php
 ## Files
 .gitignore-core
-sitemap.xml
 ARCHITECTURE.md
 api/csp_report.php
 ### Assets
@@ -31,6 +32,8 @@ _cron/daily.php
 _cron/daily/empty.php
 _cron/weekly.php
 _cron/weekly/empty.php
+_cron/monthly.php
+_cron/monthly/empty.php
 ### Example Pages
 page-css-js.php
 page-full.php
@@ -53,7 +56,6 @@ _hooks/sidebar/empty.php
 _hooks/endload/empty.php
 ### Puff
 _puff/sitewide.php
-_puff/Generation.sh
 _puff/nginx.conf
 _puff/csp_report.log
 ### Templates
