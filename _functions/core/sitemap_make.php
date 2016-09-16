@@ -13,7 +13,11 @@ function Sitemap_Make($SitemapPages) {
 		) {
 			$Sitemap .= '		<lastmod>'.$Item['Published'].'</lastmod>'.PHP_EOL;
 		}
-		$Sitemap .= '		<priority>1</priority>'.PHP_EOL;
+		$Priority = 1 - ( ( substr_count($Item['Link'], '/') - 3 ) / 10 );
+		if ( $Priority < 0.1 ) {
+			$Priortiy = 0.1;
+		}
+		$Sitemap .= '		<priority>'.$Priority.'</priority>'.PHP_EOL;
 		$Sitemap .= '		<changefreq>daily</changefreq>'.PHP_EOL;
 		$Sitemap .= '	</url>'.PHP_EOL;
 	}

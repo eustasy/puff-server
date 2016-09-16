@@ -24,4 +24,10 @@
 		<priority>1</priority>
 		<changefreq>daily</changefreq>
 	</url>
+	<url>
+		<loc>http://local.localtest.me/sub/page.php</loc>
+		<lastmod>2016-09-16</lastmod>
+		<priority>0.9</priority>
+		<changefreq>daily</changefreq>
+	</url>
 </urlset>
