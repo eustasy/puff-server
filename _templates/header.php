@@ -51,10 +51,15 @@
 ?>
 <!-- JavaScripts -->
 <script>
-<?php
-	require_once $Sitewide['Assets']['Internal']['JS'].'jQl.min.js';
-?>
-jQl.loadjQ('//cdn.jsdelivr.net/g/jquery@2.1.4');
+<?php require_once $Sitewide['Assets']['Internal']['JS'].'jQl.min.js'; ?>
+jQl.loadjQ('<?php
+	if (!empty($Page['JQ'])) {
+		echo $Page['JQ'];
+	} else {
+		echo '//cdn.jsdelivr.net/g/jquery'
+	}
+
+?>');
 jQl.boot();
 </script>
 <script>
