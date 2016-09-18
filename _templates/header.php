@@ -56,7 +56,7 @@ jQl.loadjQ('<?php
 	if (!empty($Page['JQ'])) {
 		echo $Page['JQ'];
 	} else {
-		echo '//cdn.jsdelivr.net/g/jquery'
+		echo '//cdn.jsdelivr.net/g/jquery';
 	}
 
 ?>');
