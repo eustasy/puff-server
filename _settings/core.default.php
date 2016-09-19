@@ -46,6 +46,7 @@ $Sitewide['Page']['JQ']             = '//cdn.jsdelivr.net/g/jquery';
 $Sitewide['Page']['CSS'][]          = '//cdn.jsdelivr.net/g/normalize,colors.css';
 $Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'external-links.js'] = ['internal' => true];
 $Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'] = ['internal' => true];
+$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'xss-warning.js'] = ['internal' => true];
 
 // Version
 $Sitewide['Version']['Core'] = '0.4';

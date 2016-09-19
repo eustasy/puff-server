@@ -54,26 +54,26 @@
 <?php
 	if (!empty($Page['JS'])) {
 		foreach ( $Page['JS'] as $Key => $Value ) {
+			var_dump($Key);
+			var_dump($Value);
 			if (
 				is_array($Value) &&
 				!empty($Value['internal'])
 			) {
-				echo '<script>';
+				echo '<script>'.PHP_EOL;
 				include_once $Key;
 				echo '</script>'.PHP_EOL;
 			} else if (
 				is_array($Value) &&
 				!empty($Value['library'])
 			) {
-				echo '<script>jQl.loadjQdep(\'';
-				include_once $Key;
-				echo '\');</script>'.PHP_EOL;
+				echo '<script>jQl.loadjQdep(\''.$Key.'\');</script>'.PHP_EOL;
 			} else if (
 				is_array($Value) &&
-				empty($Value['async'])
+				!empty($Value['async'])
 			) {
 				echo '<script src="'.$Key.'" async></script>'.PHP_EOL;
-			} else if ( is_array($Value) ) {
+			} else if ( is_array($Value) || empty($Value) ) {
 				echo '<script src="'.$Key.'"></script>'.PHP_EOL;
 			} else if ( !is_array($Value) ) {
 				echo '<script src="'.$Value.'"></script>'.PHP_EOL;
