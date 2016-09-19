@@ -54,8 +54,6 @@
 <?php
 	if (!empty($Page['JS'])) {
 		foreach ( $Page['JS'] as $Key => $Value ) {
-			var_dump($Key);
-			var_dump($Value);
 			if (
 				is_array($Value) &&
 				!empty($Value['internal'])
