@@ -50,17 +50,15 @@
 	}
 ?>
 <!-- JavaScripts -->
+<script><?php require_once $Sitewide['Assets']['Internal']['JS'].'jQl.min.js'; ?></script>
 <script>
-<?php require_once $Sitewide['Assets']['Internal']['JS'].'jQl.min.js'; ?>
 jQl.loadjQ('<?php
 	if (!empty($Page['JQ'])) {
 		echo $Page['JQ'];
 	} else {
 		echo '//cdn.jsdelivr.net/g/jquery';
 	}
-
 ?>');
-jQl.boot();
 </script>
 <script>
 <?php include_once $Sitewide['Assets']['Internal']['JS'].'external-links.js'; ?>
@@ -69,14 +67,37 @@ jQl.boot();
 <?php include_once $Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'; ?>
 </script>
 <?php
-	// TODO Maybe load these asyncronously too, and support internal loading.
 	if (!empty($Page['JS'])) {
-		foreach ( $Page['JS'] as $Script ) {
-			echo '<script src="'.$Script.'"></script>'."\n";
+		foreach ( $Page['JS'] as $Key => $Value ) {
+			if (
+				is_array($Value) &&
+				!empty($Value['internal'])
+			) {
+				echo '<script>';
+				include_once $Key;
+				echo '</script>'.PHP_EOL;
+			} else if (
+				is_array($Value) &&
+				!empty($Value['library'])
+			) {
+				echo '<script>jQl.loadjQdep(\'';
+				include_once $Key;
+				echo '\');</script>'.PHP_EOL;
+			} else if (
+				is_array($Value) &&
+				empty($Value['async'])
+			) {
+				echo '<script src="'.$Key.'" async></script>'.PHP_EOL;
+			} else if ( is_array($Value) ) {
+				echo '<script src="'.$Key.'"></script>'.PHP_EOL;
+			} else if ( !is_array($Value) ) {
+				echo '<script src="'.$Value.'"></script>'.PHP_EOL;
+			}
 		}
 	}
 	echo !empty($Page['Header']) ? $Page['Header'] : false;
 	puff_hook('head');
+	echo '<script>jQl.boot();</script>'.PHP_EOL;
 ?>
 <!-- Website Logo Schema -->
 <script type="application/ld+json">
