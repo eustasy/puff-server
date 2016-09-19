@@ -41,7 +41,6 @@
 <!-- Authorship -->
 <link rel="author"                      href="<?php echo $Page['Google+ Author']; ?>" title="<?php echo $Page['Author Name']; ?>"/>
 <!-- Stylesheets -->
-<link rel="stylesheet"                  href="//cdn.jsdelivr.net/g/normalize,colors.css">
 <?php
 	if (!empty($Page['CSS'])) {
 		foreach ($Page['CSS'] as $Stylsheet) {
@@ -51,21 +50,7 @@
 ?>
 <!-- JavaScripts -->
 <script><?php require_once $Sitewide['Assets']['Internal']['JS'].'jQl.min.js'; ?></script>
-<script>
-jQl.loadjQ('<?php
-	if (!empty($Page['JQ'])) {
-		echo $Page['JQ'];
-	} else {
-		echo '//cdn.jsdelivr.net/g/jquery';
-	}
-?>');
-</script>
-<script>
-<?php include_once $Sitewide['Assets']['Internal']['JS'].'external-links.js'; ?>
-</script>
-<script>
-<?php include_once $Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'; ?>
-</script>
+<script>jQl.loadjQ('<?php echo $Page['JQ']; ?>');</script>
 <?php
 	if (!empty($Page['JS'])) {
 		foreach ( $Page['JS'] as $Key => $Value ) {
