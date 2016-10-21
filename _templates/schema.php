@@ -19,50 +19,48 @@
 </script>
 <!-- Website Social Schema -->
 <script type="application/ld+json">
-<?php
-echo '{
+{
 	"@context"            : "http://schema.org",
 	"@type"               : "Organization",
-	"name"                : "'.$Sitewide['Settings']['Site Title'].'",
-	"url"                 : "'.$Sitewide['Request']['Scheme'].'://'.$Sitewide['Request']['Host'].'",
-	"sameAs"              : [';
-	$Socials = '';
-	foreach ( $Sitewide['Social'] as $Social ) {
-		$Socials .= "\n".'		"'.$Social.'",';
-	}
-	echo trim($Socials, ',');
-echo '
+	"name"                : "<?php echo $Sitewide['Settings']['Site Title']; ?>",
+	"url"                 : "<?php echo $Sitewide['Request']['Scheme'].'://'.$Sitewide['Request']['Host']; ?>",
+	"sameAs"              : [
+		<?php
+			$Socials = '';
+			foreach ( $Sitewide['Social'] as $Social ) {
+				$Socials .= PHP_EOL.'		"'.$Social.'",';
+			}
+			echo trim($Socials, ',');
+		?>
 	]
 }
-';
-?>
 </script>
 <?php
 if (
 	!empty($Page['Type']) &&
 	$Page['Type'] == 'Article'
 ) {
-	echo '<!-- Article Schema -->
+?>
+<!-- Article Schema -->
 <script type="application/ld+json">
 {
 	"@context"            : "http://schema.org",
 	"@type"               : "NewsArticle",
-	"headline"            : "'.$Page['Title'].'",
-	"alternativeHeadline" : "'.$Page['Tagline'].'",
-	"datePublished"       : "'.$Page['Published'].'",
-	"description"         : "'.$Page['Description'].'",
-	"image"               : [';
-	if ( !empty($Page['Images']) ) {
-		$Images = '';
-		foreach ( $Page['Images'] as $Image ) {
-			$Images .= "\n".'		"'.$Image.'",';
-		}
-		echo trim($Images, ',');
-	}
-	echo '
+	"headline"            : "<?php echo $Page['Title']; ?>",
+	"alternativeHeadline" : "<?php echo $Page['Tagline']; ?>",
+	"datePublished"       : "<?php echo $Page['Published']; ?>",
+	"description"         : "<?php echo $Page['Description']; ?>",
+	"image"               : [
+		<?php
+			if ( !empty($Page['Images']) ) {
+				$Images = '';
+				foreach ( $Page['Images'] as $Image ) {
+					$Images .= PHP_EOL.'		"'.$Image.'",';
+				}
+				echo trim($Images, ',');
+			}
+		?>
 	]
 }
 </script>
-';
-}
-?>
+<?php } ?>
