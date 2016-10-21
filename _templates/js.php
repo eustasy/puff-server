@@ -32,4 +32,3 @@
 	echo !empty($Page['Header']) ? $Page['Header'] : false;
 	puff_hook('head-js-post');
 	echo '<script>jQl.boot();</script>'.PHP_EOL;
-?>
