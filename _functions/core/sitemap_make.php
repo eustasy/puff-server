@@ -3,7 +3,7 @@
 function Sitemap_Make($SitemapPages) {
 	$Sitemap = '<?xml version="1.0" encoding="utf-8"?>'.PHP_EOL;
 	$Sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'.PHP_EOL;
-	
+
 	foreach ( $SitemapPages as $Item ) {
 		$Sitemap .= '	<url>'.PHP_EOL;
 		
