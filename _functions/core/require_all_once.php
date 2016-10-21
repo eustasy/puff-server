@@ -5,6 +5,8 @@
 function require_all_once($Directory) {
 	global $Sitewide;
 	foreach (glob_recursive($Directory.'*.php') as $File) {
-		require_once $File;
+		if ( $File != realpath($Sitewide['Puff']['Settings'].'custom.php') ) {
+			require_once $File;
+		}
 	}
 }
