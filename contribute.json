@@ -9,7 +9,7 @@
         "clone": "https://github.com/eustasy/puff-core.git"
     },
     "bugs": {
-        "list": https://github.com/eustasy/puff-core/issues",
+        "list": "https://github.com/eustasy/puff-core/issues",
         "report": "https://github.com/eustasy/puff-core/issues/new",
     },
     "keywords": [
