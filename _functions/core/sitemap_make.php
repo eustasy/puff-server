@@ -32,7 +32,7 @@ function Sitemap_Make($SitemapPages) {
 			$Changed = 'weekly';
 		}
 		$Sitemap .= '		<changefreq>'.$Changed.'</changefreq>'.PHP_EOL;
-		
+
 		$Sitemap .= '	</url>'.PHP_EOL;
 	}
 
