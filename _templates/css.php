@@ -7,4 +7,3 @@
 		}
 	}
 	puff_hook('head-css-post');
-?>
