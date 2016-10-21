@@ -42,11 +42,11 @@ $Sitewide['Page']['Author Name']    = 'John Smith';
 $Sitewide['Page']['Google+ Author'] = $Sitewide['Social']['Google+'];
 $Sitewide['Page']['Twitter Author'] = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];
-$Sitewide['Page']['JQ']             = '//cdn.jsdelivr.net/g/jquery';
-$Sitewide['Page']['CSS'][]          = '//cdn.jsdelivr.net/g/normalize,colors.css';
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'external-links.js'] = ['internal' => true];
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'] = ['internal' => true];
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'xss-warning.js'] = ['internal' => true];
+$Sitewide['Page']['CSS'][]          = 'https://cdn.jsdelivr.net/g/normalize,colors.css';
+$Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/g/jquery';
+$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'external-links.js'];
+$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'];
+$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'xss-warning.js'];
 
 // Version
 $Sitewide['Version']['Core'] = '0.4';
