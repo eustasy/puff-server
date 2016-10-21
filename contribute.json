@@ -1,0 +1,23 @@
+{
+    "name": "Puff Core",
+    "description": "",
+    "repository": {
+        "url": "https://github.com/eustasy/puff-core",
+        "license": "MIT",
+        "type": "git",
+        "tests": "https://travis-ci.org/eustasy/puff-core",
+        "clone": "https://github.com/eustasy/puff-core.git"
+    },
+    "bugs": {
+        "list": https://github.com/eustasy/puff-core/issues",
+        "report": "https://github.com/eustasy/puff-core/issues/new",
+    },
+    "keywords": [
+        "eustasy",
+        "puff",
+        "php",
+        "css",
+        "html5",
+        "jquery"
+    ]
+}
