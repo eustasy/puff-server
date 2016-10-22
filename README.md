@@ -1,4 +1,5 @@
 # Puff Core
+[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=17638338)](https://www.bountysource.com/teams/eustasy/issues?tracker_ids=17638338)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/ec942a83ce0f431d9f2a9bc0abada3b3)](https://www.codacy.com/app/lewisgoddard/puff-core)
 [![Code Climate](https://codeclimate.com/github/eustasy/puff-core/badges/gpa.svg)](https://codeclimate.com/github/eustasy/puff-core)
 [![Travis CI](https://api.travis-ci.org/eustasy/puff-core.svg)](https://travis-ci.org/eustasy/puff-core)
