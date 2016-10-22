@@ -44,9 +44,6 @@ $Sitewide['Page']['Twitter Author'] = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['CSS'][]          = 'https://cdn.jsdelivr.net/g/normalize,colors.css';
 $Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/g/jquery';
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'external-links.js'];
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'];
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'xss-warning.js'];
 
 // Version
 $Sitewide['Version']['Core'] = '0.4';
