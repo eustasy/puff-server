@@ -4,10 +4,10 @@
 <!-- Viewport for Mobile Devices -->
 <meta name="viewport"                   content="width=device-width, initial-scale=1.0">
 <?php
-	require __DIR__.'meta.php';
-	require __DIR__.'css.php';
-	require __DIR__.'js.php';
-	require __DIR__.'schema.php';
+	require __DIR__.'/meta.php';
+	require __DIR__.'/css.php';
+	require __DIR__.'/js.php';
+	require __DIR__.'/schema.php';
 	puff_hook('head');
 ?>
 </head>
