@@ -10,7 +10,7 @@ $(function () {
 			// Check it's not a magnet or anything stupid.
 			this.href.substring(0, 4).toLowerCase() === 'http'
 		) {
-			$(this).attr('target', '_blank');
+			$(this).attr('rel', 'noopener').attr('target', '_blank');
 		}
 	});
 });
