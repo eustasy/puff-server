@@ -3,6 +3,7 @@
 <meta name="description"                content="<?php echo $Page['Description']; ?>">
 <meta name="author"                     content="<?php echo $Page['Author']; ?>">
 <meta name="theme-color"                content="<?php echo $Page['Theme Color']; ?>">
+<meta name="generator"                  content="Puff <?php echo $Sitewide['Version']['Core']; ?>">
 <!-- Optimizations for Google -->
 <meta itemprop="name"                   content="<?php echo $Page['Title']; ?>" />
 <meta itemprop="description"            content="<?php echo $Page['Description']; ?>" />
