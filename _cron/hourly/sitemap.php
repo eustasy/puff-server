@@ -18,7 +18,7 @@ if ( count($Pages) > $Sitewide['Sitemap']['Pagination'] ) {
 	$SitemapCount = 1;
 	while ( $SitemapCount <= ceil( count($Pages) / $Sitewide['Sitemap']['Pagination'] ) ) {
 		$SitemapPages = array_slice($Pages, ( $SitemapCount - 1 ) * $Sitewide['Sitemap']['Pagination'], $SitemapCount * $Sitewide['Sitemap']['Pagination']);
-		$Sitemap = Sitemap_Make($SitemapPages);
+		$Sitemap = Puff_Sitemap_Make($SitemapPages);
 		$Result = file_put_contents($Sitewide['Root'].'sitemap_'.$SitemapCount.'.xml', $Sitemap);
 		if ( $Result ) {
 			echo 'Success: Generation and Write of Sitemap "'.$Sitewide['Root'].'sitemap_'.$SitemapCount.'.xml'.'" successful.'."\n";
@@ -27,7 +27,7 @@ if ( count($Pages) > $Sitewide['Sitemap']['Pagination'] ) {
 		}
 		$SitemapCount++;
 	}
-	$Sitemap = Sitemap_Index($SitemapCount);
+	$Sitemap = Puff_Sitemap_Index($SitemapCount);
 	$Result = file_put_contents($Sitewide['Root'].'sitemap.xml', $Sitemap);
 	if ( $Result ) {
 		echo 'Success: Generation and Write of Sitemap "'.$Sitewide['Root'].'sitemap.xml'.'" successful.'."\n";
@@ -36,7 +36,7 @@ if ( count($Pages) > $Sitewide['Sitemap']['Pagination'] ) {
 	}
 
 } else {
-	$Sitemap = Sitemap_Make($Pages);
+	$Sitemap = Puff_Sitemap_Make($Pages);
 	$Result = file_put_contents($Sitewide['Root'].'sitemap.xml', $Sitemap);
 	if ( $Result ) {
 		echo 'Success: Generation and Write of Sitemap "'.$Sitewide['Root'].'sitemap.xml'.'" successful.'."\n";

@@ -1,6 +1,6 @@
 <?php
 
-function Sitemap_Make($SitemapPages) {
+function Puff_Sitemap_Make($SitemapPages) {
 	$Sitemap = '<?xml version="1.0" encoding="utf-8"?>'.PHP_EOL;
 	$Sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'.PHP_EOL;
 

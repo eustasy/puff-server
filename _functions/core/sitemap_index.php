@@ -1,6 +1,6 @@
 <?php
 
-function Sitemap_Index($SitemapCount) {
+function Puff_Sitemap_Index($SitemapCount) {
 	global $Sitewide;
 	$Sitemap = '<?xml version="1.0" encoding="utf-8"?>'.PHP_EOL;
 	$Sitemap .= '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'.PHP_EOL;

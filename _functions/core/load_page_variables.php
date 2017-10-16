@@ -1,5 +1,13 @@
 <?php
 
+function get_page_variable($Line) {
+	$Line = explode('=', $Line, 2)[1];
+	$Line = trim($Line);
+	$Line = str_replace("\'", "'", $Line);
+	$Line = trim($Line, '\'";');
+	return $Line;
+}
+
 function load_page_variables($Sitewide, $File, $Date_Format) {
 
 	$Page['Type']      = false;
@@ -21,20 +29,17 @@ function load_page_variables($Sitewide, $File, $Date_Format) {
 	$Lines = file($File);
 	foreach ($Lines as $Line) {
 		if (strpos($Line, '$Page[\'Type\']') !== false) {
-			$Line = explode('\'', $Line);
-			$Page['Type'] = $Line[count($Line)-2];
+			$Page['Type'] = get_page_variable($Line);
 		} else if (strpos($Line, '$Page[\'Title\']') !== false) {
-			$Line = explode('\'', $Line);
-			$Page['Title'] = $Line[count($Line)-2];
+			$Page['Title'] = get_page_variable($Line);
 		} else if (strpos($Line, '$Page[\'Tagline\']') !== false) {
-			$Line = explode('\'', $Line);
-			$Page['Tagline'] = $Line[count($Line)-2];
+			$Page['Tagline'] = get_page_variable($Line);
+		} else if (strpos($Line, '$Page[\'Description\']') !== false) {
+			$Page['Description'] = get_page_variable($Line);
 		} else if (strpos($Line, '$Page[\'Author\']') !== false) {
-			$Line = explode('\'', $Line);
-			$Page['Author'] = $Line[count($Line)-2];
+			$Page['Author'] = get_page_variable($Line);
 		} else if (strpos($Line, '$Page[\'Published\']') !== false) {
-			$Line = explode('\'', $Line);
-			$Page['Published'] = $Line[count($Line)-2];
+			$Page['Published'] = get_page_variable($Line);
 		}
 	}
 
