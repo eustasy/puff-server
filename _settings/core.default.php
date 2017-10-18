@@ -47,4 +47,4 @@ $Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/gh/eustasy/colors
 $Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js';
 
 // Version
-$Sitewide['Version']['Core'] = '0.4';
+$Sitewide['Version']['Core'] = '0.5.0';
