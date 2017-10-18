@@ -42,9 +42,15 @@ $Sitewide['Page']['Author Name']    = 'John Smith';
 $Sitewide['Page']['Google+ Author'] = $Sitewide['Social']['Google+'];
 $Sitewide['Page']['Twitter Author'] = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];
+
 $Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/gh/necolas/normalize.css@latest/normalize.min.css';
 $Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/gh/eustasy/colors.css@latest/colors.min.css';
+
 $Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js';
+
+$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'external-links.js'];
+$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'];
+$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'xss-warning.js'];
 
 // Version
 $Sitewide['Version']['Core'] = '0.5.0';
