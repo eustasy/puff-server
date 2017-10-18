@@ -7,11 +7,16 @@
 		foreach ( $Page['JS'] as $Key => $Value ) {
 			if (
 				is_array($Value) &&
-				!empty($Value['internal'])
+				!empty($Value['inline'])
 			) {
 				echo '<script>'.PHP_EOL;
-				include_once $Key;
+				include_once $Sitewide['Assets']['Internal']['JS'].$Key;
 				echo '</script>'.PHP_EOL;
+			} else if (
+				is_array($Value) &&
+				!empty($Value['internal'])
+			) {
+				echo '<script src="'.$Sitewide['Assets']['External']['JS'].$Key.'"></script>'.PHP_EOL;
 			} else if (
 				is_array($Value) &&
 				!empty($Value['library'])

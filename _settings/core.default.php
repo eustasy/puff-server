@@ -48,9 +48,9 @@ $Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/gh/eustasy/colors
 
 $Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js';
 
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'external-links.js'];
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'smooth-scrolling.js'];
-$Sitewide['Page']['JS'][$Sitewide['Assets']['Internal']['JS'].'xss-warning.js'];
+$Sitewide['Page']['JS']['external-links.js']   = [ 'internal' => true ];
+$Sitewide['Page']['JS']['smooth-scrolling.js'] = [ 'internal' => true ];
+$Sitewide['Page']['JS']['xss-warning.js']      = [ 'internal' => true ];
 
 // Version
 $Sitewide['Version']['Core'] = '0.5.0';
