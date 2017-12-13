@@ -14,8 +14,7 @@ Describe what actually happened, being specific about how this differs from your
 
 ### System information
 
-- **Operating system**: 
-- **Operating system version**: 
-- **Browser**: 
-- **Browser version**: 
+- **Operating system & version**: 
+- **Nginx version**: 
+- **Browser & version**: 
 - **Enabled Browser Extensions**:
