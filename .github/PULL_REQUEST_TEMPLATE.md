@@ -1,10 +1,10 @@
-Fixes #
+Fixes #[issue]
 
 ### Changes Summary
 
-- 1 Change
-- 2 Change
-- 3 Change
-- 4 Change
+- List
+- Changes
+- Here
+- Please
 
 This pull request [ is / is not ] ready for review.
