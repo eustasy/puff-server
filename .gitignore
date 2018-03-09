@@ -9,6 +9,7 @@ sitemap_*.xml
 
 # Include these
 !_functions/core/*
+!_settings/core.default.php
 
 !.github/ISSUE_TEMPLATE.md
 !.github/PULL_REQUEST_TEMPLATE.md
@@ -30,7 +31,6 @@ sitemap_*.xml
 !_hooks/preload/headers.php
 !_hooks/preload/autolink.php
 !_hooks/preload/honor-dnt.php
-!_settings/core.default.php
 !_libs/here-miss.php
 !_puff/logs/csp_report.log
 !_puff/sitewide.php
@@ -41,34 +41,35 @@ sitemap_*.xml
 !_templates/header.php
 !_templates/js.php
 
-!assets/css/puff-core-index.css
-!assets/hsts-attempt.php
-!assets/manifest.json.php
-!assets/images/circular-blue-small-compressed.png
-!assets/js/xss-warning.js
-!assets/js/jQl.min.js
-!assets/js/smooth-scrolling.js
-!assets/js/external-links.js
-!api/csp_report.php
-!sub/page.php
-
 !.codeclimate.yml
 !.github
-!robots.txt
-!LICENSE.md
 !.stylelintignore
-!README.md
-!page-minimal.php
-!contribute.json
-!page-css-js.php
 !.codacy.yml
 !.travis.yml
 !.mdlrc
 !.stylelintrc.json
 !.eslintignore
 !.gitignore
-!ARCHITECTURE.md
 !.eslintrc.json
 !.mdlrc.style.rb
-!page-full.php
+
+!contribute.json
+!ARCHITECTURE.md
+!LICENSE.md
+!README.md
+
 !index.php
+!robots.txt
+!page-css-js.php
+!page-full.php
+!page-minimal.php
+
+!assets/css/puff-core-index.css
+!assets/hsts-attempt.php
+!assets/manifest.json.php
+!assets/js/xss-warning.js
+!assets/js/jQl.min.js
+!assets/js/smooth-scrolling.js
+!assets/js/external-links.js
+!api/csp_report.php
+!sub/page.php
