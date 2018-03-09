@@ -46,6 +46,7 @@ $Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/gh/necolas/normalize.css@latest/normalize.min.css';
 $Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/gh/eustasy/colors.css@latest/colors.min.css';
 
+$Sitewide['Page']['UsejQl']         = true;
 $Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js';
 
 $Sitewide['Page']['JS']['external-links.js']   = [ 'internal' => true ];

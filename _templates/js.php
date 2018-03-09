@@ -1,8 +1,16 @@
 <!-- JavaScripts -->
-<?php puff_hook('head-js-pre'); ?>
-<script><?php require_once $Sitewide['Assets']['Internal']['JS'].'jQl.min.js'; ?></script>
-<script>jQl.loadjQ('<?php echo $Page['JQ']; ?>');</script>
 <?php
+	puff_hook('head-js-pre');
+
+	if ( $Sitewide['Page']['UsejQl'] ) {
+		echo '<script>';
+		require_once $Sitewide['Assets']['Internal']['JS'].'jQl.min.js';
+		echo '</script>'.PHP_EOL;
+		echo '<script>jQl.loadjQ('.$Page['JQ'].')</script>'.PHP_EOL;
+	} else {
+		echo '<script src="'.$Page['JQ'].'"></script>'.PHP_EOL;
+	}
+
 	if (!empty($Page['JS'])) {
 		foreach ( $Page['JS'] as $Key => $Value ) {
 			if (
@@ -19,7 +27,8 @@
 				echo '<script src="'.$Sitewide['Assets']['External']['JS'].$Key.'"></script>'.PHP_EOL;
 			} else if (
 				is_array($Value) &&
-				!empty($Value['library'])
+				!empty($Value['library']) &&
+				$Sitewide['Page']['UsejQl']
 			) {
 				echo '<script>jQl.loadjQdep(\''.$Key.'\');</script>'.PHP_EOL;
 			} else if (
@@ -27,13 +36,26 @@
 				!empty($Value['async'])
 			) {
 				echo '<script src="'.$Key.'" async></script>'.PHP_EOL;
-			} else if ( is_array($Value) || empty($Value) ) {
+			} else if (
+				is_array($Value) ||
+				empty($Value) ||
+				(
+					is_array($Value) &&
+					!empty($Value['library']) &&
+					!$Sitewide['Page']['UsejQl']
+				)
+			) {
 				echo '<script src="'.$Key.'"></script>'.PHP_EOL;
 			} else if ( !is_array($Value) ) {
 				echo '<script src="'.$Value.'"></script>'.PHP_EOL;
 			}
 		}
 	}
+
 	echo !empty($Page['Header']) ? $Page['Header'] : false;
+
 	puff_hook('head-js-post');
-	echo '<script>jQl.boot();</script>'.PHP_EOL;
+
+	if ( $Sitewide['Page']['UsejQl'] ) {
+		echo '<script>jQl.boot();</script>'.PHP_EOL;
+	}
