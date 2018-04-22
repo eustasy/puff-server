@@ -3,6 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec942a83ce0f431d9f2a9bc0abada3b3)](https://www.codacy.com/app/eustasy/puff-core)
 [![Code Climate](https://codeclimate.com/github/eustasy/puff-core/badges/gpa.svg)](https://codeclimate.com/github/eustasy/puff-core)
 [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=17638338)](https://www.bountysource.com/teams/eustasy/issues?tracker_ids=17638338)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Feustasy%2Fpuff-core.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Feustasy%2Fpuff-core?ref=badge_shield)
 
 ## Modules
 - [Puff Blog](https://github.com/eustasy/puff-blog)
@@ -11,3 +12,7 @@
 - [Puff DB](https://github.com/eustasy/puff-db)
 - [Puff RunOnce](https://github.com/eustasy/puff-runonce) (requires DB)
 - [Puff Members](https://github.com/eustasy/puff-members) (requires DB & RunOnce)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Feustasy%2Fpuff-core.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Feustasy%2Fpuff-core?ref=badge_large)
