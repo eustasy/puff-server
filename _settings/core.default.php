@@ -43,11 +43,10 @@ $Sitewide['Page']['Google+ Author'] = $Sitewide['Social']['Google+'];
 $Sitewide['Page']['Twitter Author'] = $Sitewide['Social']['Twitter'];
 $Sitewide['Page']['Twitter Site']   = $Sitewide['Social']['Twitter'];
 
-$Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/gh/necolas/normalize.css@latest/normalize.min.css';
-$Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/gh/eustasy/colors.css@latest/colors.min.css';
+$Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/combine/gh/necolas/normalize.css@8/normalize.min.css,gh/eustasy/colors.css@1/colors.min.css';
 
 $Sitewide['Page']['UsejQl']         = true;
-$Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js';
+$Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js';
 
 $Sitewide['Page']['JS']['external-links.js']   = [ 'internal' => true ];
 $Sitewide['Page']['JS']['smooth-scrolling.js'] = [ 'internal' => true ];
