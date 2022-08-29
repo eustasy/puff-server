@@ -1,16 +1,15 @@
 {
-    "name": "Puff Core",
+    "name": "Puff Server",
     "description": "",
     "repository": {
-        "url": "https://github.com/eustasy/puff-core",
+        "url": "https://github.com/eustasy/puff-server",
         "license": "MIT",
         "type": "git",
-        "tests": "https://travis-ci.org/eustasy/puff-core",
-        "clone": "https://github.com/eustasy/puff-core.git"
+        "clone": "https://github.com/eustasy/puff-server.git"
     },
     "bugs": {
-        "list": "https://github.com/eustasy/puff-core/issues",
-        "report": "https://github.com/eustasy/puff-core/issues/new"
+        "list": "https://github.com/eustasy/puff-server/issues",
+        "report": "https://github.com/eustasy/puff-server/issues/new"
     },
     "keywords": [
         "eustasy",
