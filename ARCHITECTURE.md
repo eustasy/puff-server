@@ -1,25 +1,27 @@
 # Puff Server
-- _[Puff Geo](https://github.com/eustasy/puff-geo)_
+
+### Developer Utilities
+
+- _Geo Locate_
 	- Continent Detection
 	- Country Detection
-	- Auto-run on pre-load
-- _[Puff Cookie Compliance](https://github.com/eustasy/puff-cookiecompliance)_
+	- Auto-run on pre-load hook
+- _Cookie Compliance_
 	- Banner Creation
 	- Never-expires
 	- Optional Auto-Accept
-- _Puff Notices_
-	- Notice List
-		- Dynamic Pagination
-		- Read / Unread
-	- Feed
-- _[Puff DB](https://github.com/eustasy/puff-db)_
+- _DB Interconnect_
 	- Support for MySQL and MariaDB connections.
 	- Automatically loaded on page-load.
 	- Persistent connections when supported.
-- _[Puff Members](https://github.com/eustasy/puff-members)_
+
+### User-Facing Modules
+
+- _Auth_
 	- Registration [TODO]
 		- Library: Recaptcha (Optional)
 	- EMail Verification [TODO]
+		 - Library: Browning (Optional)
 		- Auto-Login
 	- Log In
 	- Log Out
@@ -30,7 +32,12 @@
 	- Password Resets [TODO]
 		 - Library: Browning (Optional)
 	- Private Pages
-- _Puff Support_ [TODO]
+- _Notices_ [TODO]
+	- Notice List
+		- Dynamic Pagination
+		- Read / Unread
+	- Feed
+- _Support_ [TODO]
 	- Support
 		- Library: Parsedown (Optional)
 	- Reviews
