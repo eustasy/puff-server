@@ -2,7 +2,7 @@
 
 ////	Hash a Password
 function Puff_Member_Password_Hash($Password, $Salt = false, $Method = false) {
-	global $Sitewide, $Time;
+	global $Sitewide;
 
 	////	BCRYPT
 	if (
