@@ -11,5 +11,4 @@ function Puff_Member_Session_Disable($Connection, $Session) {
 	////	Disable the Session
 	$Result = mysqli_query($Connection, 'UPDATE `Sessions` SET `Active`=\'0\' WHERE `Session`=\''.$Session.'\';');
 	return $Result;
-
 }
