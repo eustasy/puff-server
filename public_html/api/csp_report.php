@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../_puff/sitewide.php';
+require_once __DIR__.'/../../_puff/sitewide.php';
 
 $data = file_get_contents('php://input');
 $incursion = json_decode($data, true);

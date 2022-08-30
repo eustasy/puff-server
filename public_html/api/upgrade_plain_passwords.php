@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../_puff/sitewide.php';
+require_once __DIR__.'/../../_puff/sitewide.php';
 $Connection = $Sitewide['Database']['Connection'];
 
 ////	Get a list of every PLAIN password

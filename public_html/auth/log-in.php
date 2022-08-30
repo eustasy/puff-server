@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../_puff/sitewide.php';
+require_once __DIR__.'/../../_puff/sitewide.php';
 $Page['Type']        = 'Action';
 $Page['Title']       = 'Log in';
 

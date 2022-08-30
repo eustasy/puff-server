@@ -1,5 +1,5 @@
 <?php
-	require_once __DIR__.'/_puff/sitewide.php';
+	require_once __DIR__.'/../../_puff/sitewide.php';
 	$Page['Type']        = 'Page';
 	$Page['Title']       = 'Minimal Page';
 	$Page['Description'] = 'This is a minimal page.';
