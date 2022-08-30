@@ -10,11 +10,13 @@ function get_page_variable($Line) {
 
 function load_page_variables($Sitewide, $File, $Date_Format) {
 
-	$Page['Type']      = false;
-	$Page['Title']     = false;
-	$Page['Tagline']   = false;
-	$Page['Author']    = false;
-	$Page['Published'] = false;
+	$Page = array(
+		'Type' => false,
+		'Title' => false,
+		'Tagline' => false,
+		'Author' => false,
+		'Published' => false
+	);
 
 	$URL = str_replace($Sitewide['Root'], '', $File);
 	$URL = str_replace('index.php', '', $URL);
@@ -30,25 +32,23 @@ function load_page_variables($Sitewide, $File, $Date_Format) {
 	foreach ($Lines as $Line) {
 		if (strpos($Line, '$Page[\'Type\']') !== false) {
 			$Page['Type'] = get_page_variable($Line);
-		} else if (strpos($Line, '$Page[\'Title\']') !== false) {
+		} elseif (strpos($Line, '$Page[\'Title\']') !== false) {
 			$Page['Title'] = get_page_variable($Line);
-		} else if (strpos($Line, '$Page[\'Tagline\']') !== false) {
+		} elseif (strpos($Line, '$Page[\'Tagline\']') !== false) {
 			$Page['Tagline'] = get_page_variable($Line);
-		} else if (strpos($Line, '$Page[\'Description\']') !== false) {
+		} elseif (strpos($Line, '$Page[\'Description\']') !== false) {
 			$Page['Description'] = get_page_variable($Line);
-		} else if (strpos($Line, '$Page[\'Author\']') !== false) {
+		} elseif (strpos($Line, '$Page[\'Author\']') !== false) {
 			$Page['Author'] = get_page_variable($Line);
-		} else if (strpos($Line, '$Page[\'Published\']') !== false) {
+		} elseif (strpos($Line, '$Page[\'Published\']') !== false) {
 			$Page['Published'] = get_page_variable($Line);
 		}
 	}
 
+	$Page['Published'] = date($Date_Format, filemtime($File));
 	if ( $Page['Published'] ) {
 		$Page['Published'] = date($Date_Format, strtotime($Page['Published']));
-	} else {
-		$Page['Published'] = date($Date_Format, filemtime($File));
 	}
 
 	return $Page;
-
 }
