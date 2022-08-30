@@ -5,9 +5,9 @@
 
 ////	Usage
 // '/' becomes 'index'
-// '/blog' becomes 'blog'
-// '/blog/' becomes 'blog-index'
-// '/blog/post-1' becomes 'blog-post-1'
+// '/sub' becomes 'sub'
+// '/sub/' becomes 'blog-index'
+// '/sub/page-1' becomes 'sub-page-1'
 
 ////	Code
 
