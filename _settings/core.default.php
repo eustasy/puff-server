@@ -48,8 +48,6 @@ $Sitewide['Page']['CSS'][]          = 'http://cdn.jsdelivr.net/combine/gh/necola
 $Sitewide['Page']['UsejQl']         = true;
 $Sitewide['Page']['JQ']             = 'https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js';
 
-$Sitewide['Page']['JS']['external-links.js']   = [ 'internal' => true ];
-$Sitewide['Page']['JS']['smooth-scrolling.js'] = [ 'internal' => true ];
 $Sitewide['Page']['JS']['xss-warning.js']      = [ 'internal' => true ];
 
 // Version
